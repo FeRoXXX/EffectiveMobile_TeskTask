@@ -8,7 +8,7 @@
 import UIKit
 
 class TabBarController: UITabBarController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTabBarItems()
@@ -16,6 +16,8 @@ class TabBarController: UITabBarController {
     }
     
     private func setupTabBarItems() {
+        navigationController?.setNavigationBarHidden(true, animated: true)
+        navigationController?.setToolbarHidden(true, animated: true)
         let searchController: UINavigationController = UINavigationController(rootViewController: SearchViewController())
         searchController.setNavigationBarHidden(true, animated: true)
         searchController.title = "Поиск"
@@ -36,6 +38,7 @@ class TabBarController: UITabBarController {
         setViewControllers([searchController, favoritesController, responsesController, messagesController, profileController], animated: true)
         tabBar.barTintColor = UIColor(red: 133/255, green: 134/255, blue: 136/255, alpha: 1)
         tabBar.tintColor = UIColor(red: 43/255, green: 126/255, blue: 254/255, alpha: 1)
+        
     }
     
     private func addSeparator() {

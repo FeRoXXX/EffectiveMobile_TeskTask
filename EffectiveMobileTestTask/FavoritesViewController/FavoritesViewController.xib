@@ -16,8 +16,20 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tdw-5n-xkG" customClass="AuthenticationView" customModule="EffectiveMobileTestTask" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="0.0" width="393" height="818"/>
+                    <color key="backgroundColor" red="0.039215691390000001" green="0.039215695109999997" blue="0.039215687659999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </view>
+            </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" red="0.047058824450000002" green="0.047058824450000002" blue="0.047058824450000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="tdw-5n-xkG" secondAttribute="bottom" id="QCr-jg-Yf7"/>
+                <constraint firstItem="tdw-5n-xkG" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="YU1-do-Wip"/>
+                <constraint firstItem="tdw-5n-xkG" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="r6v-CL-fgC"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="tdw-5n-xkG" secondAttribute="trailing" id="sD1-m0-mBJ"/>
+            </constraints>
             <point key="canvasLocation" x="132" y="-11"/>
         </view>
     </objects>

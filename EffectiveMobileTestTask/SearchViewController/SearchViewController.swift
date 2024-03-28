@@ -8,11 +8,21 @@
 import UIKit
 
 class SearchViewController: UIViewController {
-
+    @IBOutlet weak var authenticationView: AuthenticationView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        authenticationView.nextButtonClicked = { [weak self] in
+            guard let self = self else { return }
+            goToEmailConfirmation()
+        }
     }
 
+}
+
+extension SearchViewController: AuthenticationProtocol {
+    func goToEmailConfirmation() {
+        guard let navigationController = navigationController else { return }
+        navigationController.pushViewController(CodeIntroductionElementsViewController(), animated: true)
+    }
 }

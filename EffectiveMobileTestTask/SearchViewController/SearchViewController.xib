@@ -9,6 +9,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SearchViewController" customModule="EffectiveMobileTestTask" customModuleProvider="target">
             <connections>
+                <outlet property="authenticationView" destination="g7i-qs-iIE" id="w5h-jn-WuH"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -16,8 +17,20 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g7i-qs-iIE" customClass="AuthenticationView" customModule="EffectiveMobileTestTask" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="0.0" width="393" height="818"/>
+                    <color key="backgroundColor" red="0.039215691390000001" green="0.039215695109999997" blue="0.039215687659999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </view>
+            </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" red="0.047058824450000002" green="0.047058824450000002" blue="0.047058824450000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <constraints>
+                <constraint firstItem="g7i-qs-iIE" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="2ke-S3-IcV"/>
+                <constraint firstItem="g7i-qs-iIE" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="Aog-Yk-Rcg"/>
+                <constraint firstItem="g7i-qs-iIE" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="gJE-Os-EtL"/>
+                <constraint firstItem="g7i-qs-iIE" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="tER-Of-Y5N"/>
+            </constraints>
             <point key="canvasLocation" x="132" y="-11"/>
         </view>
     </objects>

@@ -24,6 +24,17 @@
 		2708D34E2BB5877B000CC035 /* MessagesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2708D34C2BB5877B000CC035 /* MessagesViewController.xib */; };
 		2708D3512BB58786000CC035 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2708D34F2BB58786000CC035 /* ProfileViewController.swift */; };
 		2708D3522BB58786000CC035 /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2708D3502BB58786000CC035 /* ProfileViewController.xib */; };
+		2708D35D2BB5AFDC000CC035 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2708D35C2BB5AFDC000CC035 /* LoginView.swift */; };
+		2708D35F2BB5B007000CC035 /* FindEmployee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2708D35E2BB5B007000CC035 /* FindEmployee.swift */; };
+		2708D3612BB5B0C6000CC035 /* LoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2708D3602BB5B0C6000CC035 /* LoginView.xib */; };
+		2708D3632BB5B5D5000CC035 /* FindEmployee.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2708D3622BB5B5D5000CC035 /* FindEmployee.xib */; };
+		2708D3652BB5C171000CC035 /* AuthenticationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2708D3642BB5C171000CC035 /* AuthenticationView.swift */; };
+		2708D3672BB5C17B000CC035 /* AuthenticationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2708D3662BB5C17B000CC035 /* AuthenticationView.xib */; };
+		2708D36A2BB5C98D000CC035 /* AuthenticationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2708D3692BB5C98D000CC035 /* AuthenticationProtocol.swift */; };
+		2708D36E2BB5CB30000CC035 /* CodeIntroductionElementsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2708D36C2BB5CB30000CC035 /* CodeIntroductionElementsViewController.swift */; };
+		2708D36F2BB5CB30000CC035 /* CodeIntroductionElementsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2708D36D2BB5CB30000CC035 /* CodeIntroductionElementsViewController.xib */; };
+		2708D3712BB5CD82000CC035 /* CodeIntroductionElements.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2708D3702BB5CD82000CC035 /* CodeIntroductionElements.swift */; };
+		2708D3752BB5CE42000CC035 /* CodeIntroductionElements.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2708D3742BB5CE42000CC035 /* CodeIntroductionElements.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +57,17 @@
 		2708D34C2BB5877B000CC035 /* MessagesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MessagesViewController.xib; sourceTree = "<group>"; };
 		2708D34F2BB58786000CC035 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		2708D3502BB58786000CC035 /* ProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
+		2708D35C2BB5AFDC000CC035 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		2708D35E2BB5B007000CC035 /* FindEmployee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindEmployee.swift; sourceTree = "<group>"; };
+		2708D3602BB5B0C6000CC035 /* LoginView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginView.xib; sourceTree = "<group>"; };
+		2708D3622BB5B5D5000CC035 /* FindEmployee.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FindEmployee.xib; sourceTree = "<group>"; };
+		2708D3642BB5C171000CC035 /* AuthenticationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationView.swift; sourceTree = "<group>"; };
+		2708D3662BB5C17B000CC035 /* AuthenticationView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AuthenticationView.xib; sourceTree = "<group>"; };
+		2708D3692BB5C98D000CC035 /* AuthenticationProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationProtocol.swift; sourceTree = "<group>"; };
+		2708D36C2BB5CB30000CC035 /* CodeIntroductionElementsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeIntroductionElementsViewController.swift; sourceTree = "<group>"; };
+		2708D36D2BB5CB30000CC035 /* CodeIntroductionElementsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CodeIntroductionElementsViewController.xib; sourceTree = "<group>"; };
+		2708D3702BB5CD82000CC035 /* CodeIntroductionElements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeIntroductionElements.swift; sourceTree = "<group>"; };
+		2708D3742BB5CE42000CC035 /* CodeIntroductionElements.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CodeIntroductionElements.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +100,9 @@
 		2708D31B2BB57D61000CC035 /* EffectiveMobileTestTask */ = {
 			isa = PBXGroup;
 			children = (
+				2708D36B2BB5CAF1000CC035 /* CodeIntroductionViewController */,
+				2708D3682BB5C972000CC035 /* Protocols */,
+				2708D35B2BB5AFC3000CC035 /* UIElements */,
 				2708D33E2BB586DB000CC035 /* ProfileViewController */,
 				2708D33D2BB586D8000CC035 /* MessagesViewController */,
 				2708D33C2BB586D4000CC035 /* ResponsesViewController */,
@@ -156,6 +181,38 @@
 			path = ProfileViewController;
 			sourceTree = "<group>";
 		};
+		2708D35B2BB5AFC3000CC035 /* UIElements */ = {
+			isa = PBXGroup;
+			children = (
+				2708D35C2BB5AFDC000CC035 /* LoginView.swift */,
+				2708D35E2BB5B007000CC035 /* FindEmployee.swift */,
+				2708D3602BB5B0C6000CC035 /* LoginView.xib */,
+				2708D3622BB5B5D5000CC035 /* FindEmployee.xib */,
+				2708D3642BB5C171000CC035 /* AuthenticationView.swift */,
+				2708D3662BB5C17B000CC035 /* AuthenticationView.xib */,
+				2708D3702BB5CD82000CC035 /* CodeIntroductionElements.swift */,
+				2708D3742BB5CE42000CC035 /* CodeIntroductionElements.xib */,
+			);
+			path = UIElements;
+			sourceTree = "<group>";
+		};
+		2708D3682BB5C972000CC035 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				2708D3692BB5C98D000CC035 /* AuthenticationProtocol.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		2708D36B2BB5CAF1000CC035 /* CodeIntroductionViewController */ = {
+			isa = PBXGroup;
+			children = (
+				2708D36C2BB5CB30000CC035 /* CodeIntroductionElementsViewController.swift */,
+				2708D36D2BB5CB30000CC035 /* CodeIntroductionElementsViewController.xib */,
+			);
+			path = CodeIntroductionViewController;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -215,12 +272,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				2708D3522BB58786000CC035 /* ProfileViewController.xib in Resources */,
+				2708D3612BB5B0C6000CC035 /* LoginView.xib in Resources */,
+				2708D3672BB5C17B000CC035 /* AuthenticationView.xib in Resources */,
 				2708D34E2BB5877B000CC035 /* MessagesViewController.xib in Resources */,
+				2708D3632BB5B5D5000CC035 /* FindEmployee.xib in Resources */,
 				2708D32C2BB57D63000CC035 /* LaunchScreen.storyboard in Resources */,
+				2708D36F2BB5CB30000CC035 /* CodeIntroductionElementsViewController.xib in Resources */,
 				2708D3292BB57D63000CC035 /* Assets.xcassets in Resources */,
 				2708D3462BB5874C000CC035 /* FavoritesViewController.xib in Resources */,
 				2708D3422BB5873A000CC035 /* SearchViewController.xib in Resources */,
 				2708D34A2BB5875B000CC035 /* ResponsesViewController.xib in Resources */,
+				2708D3752BB5CE42000CC035 /* CodeIntroductionElements.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -234,13 +296,19 @@
 				2708D34D2BB5877B000CC035 /* MessagesViewController.swift in Sources */,
 				2708D3272BB57D61000CC035 /* EffectiveMobileTestTask.xcdatamodeld in Sources */,
 				2708D3412BB5873A000CC035 /* SearchViewController.swift in Sources */,
+				2708D35F2BB5B007000CC035 /* FindEmployee.swift in Sources */,
+				2708D3652BB5C171000CC035 /* AuthenticationView.swift in Sources */,
 				2708D3452BB5874C000CC035 /* FavoritesViewController.swift in Sources */,
 				2708D3492BB5875B000CC035 /* ResponsesViewController.swift in Sources */,
 				2708D3512BB58786000CC035 /* ProfileViewController.swift in Sources */,
+				2708D3712BB5CD82000CC035 /* CodeIntroductionElements.swift in Sources */,
+				2708D35D2BB5AFDC000CC035 /* LoginView.swift in Sources */,
 				2708D31D2BB57D61000CC035 /* AppDelegate.swift in Sources */,
 				2708D3372BB580D1000CC035 /* TabBarController.swift in Sources */,
 				2708D3352BB58074000CC035 /* NavigationViewController.swift in Sources */,
 				2708D31F2BB57D61000CC035 /* SceneDelegate.swift in Sources */,
+				2708D36E2BB5CB30000CC035 /* CodeIntroductionElementsViewController.swift in Sources */,
+				2708D36A2BB5C98D000CC035 /* AuthenticationProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

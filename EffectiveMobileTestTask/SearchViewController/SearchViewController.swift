@@ -23,12 +23,21 @@ class SearchViewController: UIViewController {
             authenticationView.loginView.emailTextField.text = ""
         }
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        if UserDefaults().bool(forKey: "isUserLoggedIn") {
+            authenticationView.isHidden = true
+        }
+    }
 
 }
 
 extension SearchViewController: AuthenticationProtocol {
     func goToEmailConfirmation() {
         guard let navigationController = navigationController else { return }
-        navigationController.pushViewController(CodeIntroductionElementsViewController(), animated: true)
+        let viewController = CodeIntroductionElementsViewController()
+        let email = authenticationView.loginView.emailTextField.text
+        viewController.email = email
+        navigationController.pushViewController(viewController, animated: true)
     }
 }

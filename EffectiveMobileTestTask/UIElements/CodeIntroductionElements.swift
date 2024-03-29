@@ -16,6 +16,8 @@ class CodeIntroductionElements: UIView {
     @IBOutlet weak var fourthNumberTextField: UITextField!
     @IBOutlet weak var acceptButton: UIButton!
     
+    var toMainMenu: (() -> Void)?
+    
     required init?(coder: NSCoder) {
         super.init(coder: coder)
         
@@ -37,9 +39,8 @@ class CodeIntroductionElements: UIView {
     }
     
     @IBAction func acceptButtonClicked(_ sender: Any) {
-        
+        toMainMenu?()
     }
-    
     
 }
 

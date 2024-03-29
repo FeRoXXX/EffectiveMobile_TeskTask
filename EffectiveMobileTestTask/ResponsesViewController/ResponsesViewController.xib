@@ -9,6 +9,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ResponsesViewController" customModule="EffectiveMobileTestTask" customModuleProvider="target">
             <connections>
+                <outlet property="authenticationView" destination="57I-uU-Da9" id="d65-DT-Wcc"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>

@@ -13,6 +13,7 @@ class FindEmployee: UIView {
         super.init(coder: coder)
         
         setupView()
+        self.layer.cornerRadius = 8
     }
     
     private func setupView() {

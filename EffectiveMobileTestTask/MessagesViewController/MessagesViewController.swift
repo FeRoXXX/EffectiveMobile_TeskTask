@@ -19,6 +19,12 @@ class MessagesViewController: UIViewController {
         }
     }
 
+    override func viewDidDisappear(_ animated: Bool) {
+        if !authenticationView.isHidden {
+            authenticationView.loginView.emailTextField.text = ""
+        }
+    }
+    
 }
 
 extension MessagesViewController: AuthenticationProtocol {

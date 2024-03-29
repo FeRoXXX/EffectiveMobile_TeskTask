@@ -19,6 +19,12 @@ class ProfileViewController: UIViewController {
         }
     }
 
+    override func viewDidDisappear(_ animated: Bool) {
+        if !authenticationView.isHidden {
+            authenticationView.loginView.emailTextField.text = ""
+        }
+    }
+    
 }
 
 extension ProfileViewController: AuthenticationProtocol {

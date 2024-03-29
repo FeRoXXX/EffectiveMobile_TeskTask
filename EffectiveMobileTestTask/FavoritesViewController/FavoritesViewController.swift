@@ -18,6 +18,12 @@ class FavoritesViewController: UIViewController {
             goToEmailConfirmation()
         }
     }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        if !authenticationView.isHidden {
+            authenticationView.loginView.emailTextField.text = ""
+        }
+    }
 
 }
 

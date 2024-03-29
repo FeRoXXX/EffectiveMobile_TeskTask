@@ -9,6 +9,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CodeIntroductionElements" customModule="EffectiveMobileTestTask" customModuleProvider="target">
             <connections>
+                <outlet property="acceptButton" destination="9EX-sd-wbZ" id="Xvw-eq-tbZ"/>
                 <outlet property="firstNumberTextField" destination="b3l-Xs-blT" id="O8h-bX-wsc"/>
                 <outlet property="fourthNumberTextField" destination="vmA-dx-IWl" id="XaS-nm-7DQ"/>
                 <outlet property="secondNumberTextField" destination="0tl-k9-XSq" id="iLh-U6-Rdg"/>
@@ -41,28 +42,28 @@
                             <color key="backgroundColor" red="0.19215688110000001" green="0.19607841970000001" blue="0.20392158630000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                            <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="continue" textContentType="one-time-code"/>
                         </textField>
                         <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0tl-k9-XSq">
                             <rect key="frame" x="56" y="0.0" width="48" height="48"/>
                             <color key="backgroundColor" red="0.19215688110000001" green="0.19607841970000001" blue="0.20392158630000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                            <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="continue" textContentType="one-time-code"/>
                         </textField>
                         <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4SQ-aD-2oG">
                             <rect key="frame" x="112" y="0.0" width="48" height="48"/>
                             <color key="backgroundColor" red="0.19215688110000001" green="0.19607841970000001" blue="0.20392158630000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                            <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="continue" textContentType="one-time-code"/>
                         </textField>
                         <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vmA-dx-IWl">
                             <rect key="frame" x="168" y="0.0" width="48" height="48"/>
                             <color key="backgroundColor" red="0.19215688110000001" green="0.19607841970000001" blue="0.20392158630000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                            <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="done" textContentType="one-time-code"/>
                         </textField>
                     </subviews>
                     <constraints>
@@ -71,10 +72,12 @@
                         <constraint firstItem="4SQ-aD-2oG" firstAttribute="width" secondItem="0tl-k9-XSq" secondAttribute="width" id="wdC-nf-NAe"/>
                     </constraints>
                 </stackView>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9EX-sd-wbZ">
+                <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9EX-sd-wbZ">
                     <rect key="frame" x="0.0" y="177" width="330" height="48"/>
-                    <state key="normal" title="Button"/>
-                    <buttonConfiguration key="configuration" style="filled" title="Button"/>
+                    <color key="backgroundColor" red="0.098039209840000002" green="0.25490197539999998" blue="0.47450977560000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <buttonConfiguration key="configuration" style="filled" title="Подтвердить">
+                        <backgroundConfiguration key="background" cornerRadius="8"/>
+                    </buttonConfiguration>
                     <connections>
                         <action selector="acceptButtonClicked:" destination="-1" eventType="touchUpInside" id="wan-XI-Or4"/>
                     </connections>

@@ -35,6 +35,16 @@
 		2708D36F2BB5CB30000CC035 /* CodeIntroductionElementsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2708D36D2BB5CB30000CC035 /* CodeIntroductionElementsViewController.xib */; };
 		2708D3712BB5CD82000CC035 /* CodeIntroductionElements.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2708D3702BB5CD82000CC035 /* CodeIntroductionElements.swift */; };
 		2708D3752BB5CE42000CC035 /* CodeIntroductionElements.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2708D3742BB5CE42000CC035 /* CodeIntroductionElements.xib */; };
+		2708D3792BB6E48B000CC035 /* SearchAndSortString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2708D3782BB6E48B000CC035 /* SearchAndSortString.swift */; };
+		2708D3802BB71369000CC035 /* FastFiltersCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2708D37E2BB71368000CC035 /* FastFiltersCell.swift */; };
+		2708D3812BB71369000CC035 /* FastFiltersCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2708D37F2BB71368000CC035 /* FastFiltersCell.xib */; };
+		2708D3842BB7FEDD000CC035 /* StaticDataForFastFilters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2708D3832BB7FEDD000CC035 /* StaticDataForFastFilters.swift */; };
+		2708D38E2BB936EC000CC035 /* ViewForSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2708D38D2BB936EC000CC035 /* ViewForSearchViewController.swift */; };
+		2708D3902BB9370E000CC035 /* ViewForSearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2708D38F2BB9370E000CC035 /* ViewForSearchViewController.xib */; };
+		2708D3952BB9A927000CC035 /* VacancyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2708D3932BB9A927000CC035 /* VacancyCell.swift */; };
+		2708D3962BB9A927000CC035 /* VacancyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2708D3942BB9A927000CC035 /* VacancyCell.xib */; };
+		2708D3982BB9B4FC000CC035 /* LabelAndImageForCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2708D3972BB9B4FC000CC035 /* LabelAndImageForCell.swift */; };
+		2708D39A2BB9B531000CC035 /* LabelAndImageForCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2708D3992BB9B531000CC035 /* LabelAndImageForCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -68,6 +78,16 @@
 		2708D36D2BB5CB30000CC035 /* CodeIntroductionElementsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CodeIntroductionElementsViewController.xib; sourceTree = "<group>"; };
 		2708D3702BB5CD82000CC035 /* CodeIntroductionElements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeIntroductionElements.swift; sourceTree = "<group>"; };
 		2708D3742BB5CE42000CC035 /* CodeIntroductionElements.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CodeIntroductionElements.xib; sourceTree = "<group>"; };
+		2708D3782BB6E48B000CC035 /* SearchAndSortString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchAndSortString.swift; sourceTree = "<group>"; };
+		2708D37E2BB71368000CC035 /* FastFiltersCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FastFiltersCell.swift; sourceTree = "<group>"; };
+		2708D37F2BB71368000CC035 /* FastFiltersCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FastFiltersCell.xib; sourceTree = "<group>"; };
+		2708D3832BB7FEDD000CC035 /* StaticDataForFastFilters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaticDataForFastFilters.swift; sourceTree = "<group>"; };
+		2708D38D2BB936EC000CC035 /* ViewForSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewForSearchViewController.swift; sourceTree = "<group>"; };
+		2708D38F2BB9370E000CC035 /* ViewForSearchViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ViewForSearchViewController.xib; sourceTree = "<group>"; };
+		2708D3932BB9A927000CC035 /* VacancyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VacancyCell.swift; sourceTree = "<group>"; };
+		2708D3942BB9A927000CC035 /* VacancyCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VacancyCell.xib; sourceTree = "<group>"; };
+		2708D3972BB9B4FC000CC035 /* LabelAndImageForCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelAndImageForCell.swift; sourceTree = "<group>"; };
+		2708D3992BB9B531000CC035 /* LabelAndImageForCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LabelAndImageForCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +120,7 @@
 		2708D31B2BB57D61000CC035 /* EffectiveMobileTestTask */ = {
 			isa = PBXGroup;
 			children = (
+				2708D3822BB7FEBD000CC035 /* Data */,
 				2708D36B2BB5CAF1000CC035 /* CodeIntroductionViewController */,
 				2708D3682BB5C972000CC035 /* Protocols */,
 				2708D35B2BB5AFC3000CC035 /* UIElements */,
@@ -192,6 +213,15 @@
 				2708D3662BB5C17B000CC035 /* AuthenticationView.xib */,
 				2708D3702BB5CD82000CC035 /* CodeIntroductionElements.swift */,
 				2708D3742BB5CE42000CC035 /* CodeIntroductionElements.xib */,
+				2708D3782BB6E48B000CC035 /* SearchAndSortString.swift */,
+				2708D37E2BB71368000CC035 /* FastFiltersCell.swift */,
+				2708D37F2BB71368000CC035 /* FastFiltersCell.xib */,
+				2708D38D2BB936EC000CC035 /* ViewForSearchViewController.swift */,
+				2708D3932BB9A927000CC035 /* VacancyCell.swift */,
+				2708D3942BB9A927000CC035 /* VacancyCell.xib */,
+				2708D38F2BB9370E000CC035 /* ViewForSearchViewController.xib */,
+				2708D3972BB9B4FC000CC035 /* LabelAndImageForCell.swift */,
+				2708D3992BB9B531000CC035 /* LabelAndImageForCell.xib */,
 			);
 			path = UIElements;
 			sourceTree = "<group>";
@@ -211,6 +241,14 @@
 				2708D36D2BB5CB30000CC035 /* CodeIntroductionElementsViewController.xib */,
 			);
 			path = CodeIntroductionViewController;
+			sourceTree = "<group>";
+		};
+		2708D3822BB7FEBD000CC035 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				2708D3832BB7FEDD000CC035 /* StaticDataForFastFilters.swift */,
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -271,10 +309,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2708D3812BB71369000CC035 /* FastFiltersCell.xib in Resources */,
 				2708D3522BB58786000CC035 /* ProfileViewController.xib in Resources */,
 				2708D3612BB5B0C6000CC035 /* LoginView.xib in Resources */,
 				2708D3672BB5C17B000CC035 /* AuthenticationView.xib in Resources */,
 				2708D34E2BB5877B000CC035 /* MessagesViewController.xib in Resources */,
+				2708D3902BB9370E000CC035 /* ViewForSearchViewController.xib in Resources */,
+				2708D39A2BB9B531000CC035 /* LabelAndImageForCell.xib in Resources */,
 				2708D3632BB5B5D5000CC035 /* FindEmployee.xib in Resources */,
 				2708D32C2BB57D63000CC035 /* LaunchScreen.storyboard in Resources */,
 				2708D36F2BB5CB30000CC035 /* CodeIntroductionElementsViewController.xib in Resources */,
@@ -283,6 +324,7 @@
 				2708D3422BB5873A000CC035 /* SearchViewController.xib in Resources */,
 				2708D34A2BB5875B000CC035 /* ResponsesViewController.xib in Resources */,
 				2708D3752BB5CE42000CC035 /* CodeIntroductionElements.xib in Resources */,
+				2708D3962BB9A927000CC035 /* VacancyCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -296,18 +338,24 @@
 				2708D34D2BB5877B000CC035 /* MessagesViewController.swift in Sources */,
 				2708D3272BB57D61000CC035 /* EffectiveMobileTestTask.xcdatamodeld in Sources */,
 				2708D3412BB5873A000CC035 /* SearchViewController.swift in Sources */,
+				2708D3842BB7FEDD000CC035 /* StaticDataForFastFilters.swift in Sources */,
+				2708D3952BB9A927000CC035 /* VacancyCell.swift in Sources */,
 				2708D35F2BB5B007000CC035 /* FindEmployee.swift in Sources */,
 				2708D3652BB5C171000CC035 /* AuthenticationView.swift in Sources */,
+				2708D3802BB71369000CC035 /* FastFiltersCell.swift in Sources */,
+				2708D3982BB9B4FC000CC035 /* LabelAndImageForCell.swift in Sources */,
 				2708D3452BB5874C000CC035 /* FavoritesViewController.swift in Sources */,
 				2708D3492BB5875B000CC035 /* ResponsesViewController.swift in Sources */,
 				2708D3512BB58786000CC035 /* ProfileViewController.swift in Sources */,
 				2708D3712BB5CD82000CC035 /* CodeIntroductionElements.swift in Sources */,
 				2708D35D2BB5AFDC000CC035 /* LoginView.swift in Sources */,
+				2708D38E2BB936EC000CC035 /* ViewForSearchViewController.swift in Sources */,
 				2708D31D2BB57D61000CC035 /* AppDelegate.swift in Sources */,
 				2708D3372BB580D1000CC035 /* TabBarController.swift in Sources */,
 				2708D3352BB58074000CC035 /* NavigationViewController.swift in Sources */,
 				2708D31F2BB57D61000CC035 /* SceneDelegate.swift in Sources */,
 				2708D36E2BB5CB30000CC035 /* CodeIntroductionElementsViewController.swift in Sources */,
+				2708D3792BB6E48B000CC035 /* SearchAndSortString.swift in Sources */,
 				2708D36A2BB5C98D000CC035 /* AuthenticationProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

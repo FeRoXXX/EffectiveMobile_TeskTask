@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="FastFiltersCell" id="gTV-IL-0wX" customClass="FastFiltersCell" customModule="EffectiveMobileTestTask" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="132" height="120"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="132" height="120"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zot-Fh-OLr">
+                        <rect key="frame" x="0.0" y="0.0" width="132" height="120"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2Ey-pM-kyS">
+                                <rect key="frame" x="8" y="10" width="32" height="32"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="757" text="Поднять резюме в поиске" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" minimumScaleFactor="0.25" translatesAutoresizingMaskIntoConstraints="NO" id="yEJ-0k-ibW">
+                                <rect key="frame" x="8" y="58" width="112" height="34"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                                <lineBreakStrategy key="lineBreakStrategy" hangulWordPriority="YES"/>
+                            </label>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="256" verticalCompressionResistancePriority="756" text="Поднять" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aj0-Sw-Y9Y">
+                                <rect key="frame" x="8" y="92" width="112" height="17"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
+                                <color key="textColor" red="0.40784314269999999" green="0.69019609689999994" blue="0.35294118520000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.13333332540000001" green="0.13725490870000001" blue="0.14509806040000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="aj0-Sw-Y9Y" firstAttribute="top" secondItem="yEJ-0k-ibW" secondAttribute="bottom" id="BpW-Ux-5Ub"/>
+                            <constraint firstAttribute="trailing" secondItem="yEJ-0k-ibW" secondAttribute="trailing" constant="12" id="F8r-98-FAJ"/>
+                            <constraint firstItem="2Ey-pM-kyS" firstAttribute="leading" secondItem="Zot-Fh-OLr" secondAttribute="leading" constant="8" id="KJq-Ho-Rxq"/>
+                            <constraint firstAttribute="trailing" secondItem="2Ey-pM-kyS" secondAttribute="trailing" constant="92" id="LLW-9D-8gp"/>
+                            <constraint firstItem="yEJ-0k-ibW" firstAttribute="leading" secondItem="Zot-Fh-OLr" secondAttribute="leading" constant="8" id="UQb-TH-1K5"/>
+                            <constraint firstAttribute="bottom" secondItem="2Ey-pM-kyS" secondAttribute="bottom" constant="78" id="Y3s-qn-vZT"/>
+                            <constraint firstAttribute="bottom" secondItem="aj0-Sw-Y9Y" secondAttribute="bottom" constant="11" id="bkX-i3-vkb"/>
+                            <constraint firstItem="yEJ-0k-ibW" firstAttribute="top" secondItem="Zot-Fh-OLr" secondAttribute="top" constant="58" id="jkd-ES-La3"/>
+                            <constraint firstItem="aj0-Sw-Y9Y" firstAttribute="leading" secondItem="Zot-Fh-OLr" secondAttribute="leading" constant="8" id="uMo-nK-QFd"/>
+                            <constraint firstAttribute="trailing" secondItem="aj0-Sw-Y9Y" secondAttribute="trailing" constant="12" id="vK0-7f-YDN"/>
+                            <constraint firstItem="2Ey-pM-kyS" firstAttribute="top" secondItem="Zot-Fh-OLr" secondAttribute="top" constant="10" id="zK3-rz-N7I"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="Zot-Fh-OLr" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="6jr-Z5-Wjs"/>
+                <constraint firstAttribute="trailing" secondItem="Zot-Fh-OLr" secondAttribute="trailing" id="JZ1-eH-Ndu"/>
+                <constraint firstAttribute="bottom" secondItem="Zot-Fh-OLr" secondAttribute="bottom" id="k4Y-ZF-MsM"/>
+                <constraint firstItem="Zot-Fh-OLr" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="xvy-eG-RAa"/>
+            </constraints>
+            <connections>
+                <outlet property="bottomTextLabelConstraint" destination="BpW-Ux-5Ub" id="aJl-PF-iKr"/>
+                <outlet property="imageView" destination="2Ey-pM-kyS" id="AdG-pC-eQI"/>
+                <outlet property="textLabel" destination="yEJ-0k-ibW" id="vfa-9f-x1N"/>
+                <outlet property="upInSearchLabel" destination="aj0-Sw-Y9Y" id="AOe-8e-mxO"/>
+            </connections>
+            <point key="canvasLocation" x="33.587786259541986" y="-11.267605633802818"/>
+        </collectionViewCell>
+    </objects>
+</document>

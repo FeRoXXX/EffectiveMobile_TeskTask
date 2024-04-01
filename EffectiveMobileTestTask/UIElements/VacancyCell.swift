@@ -16,6 +16,8 @@ class VacancyCell: UICollectionViewCell {
     @IBOutlet weak var companyView: LabelAndImageForCell!
     @IBOutlet weak var experienceView: LabelAndImageForCell!
     @IBOutlet weak var dateOfPublishLabel: UILabel!
+    @IBOutlet weak var likeImage: UIImageView!
+    @IBOutlet weak var requestButton: UIButton!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -23,7 +25,6 @@ class VacancyCell: UICollectionViewCell {
         mainView.translatesAutoresizingMaskIntoConstraints = false
         mainView.widthAnchor.constraint(equalToConstant: UIScreen.main.bounds.size.width - 40).isActive = true
         postLaber.sizeToFit()
-        postLaber.text = "UI/UX инженер акакакакак пепеп пепепепеп лпоещопшще пшщеощшпоешпщо пшщеопщшеопщшеоп"
     }
 
 }

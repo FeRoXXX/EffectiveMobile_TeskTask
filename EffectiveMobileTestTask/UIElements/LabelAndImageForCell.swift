@@ -12,6 +12,7 @@ class LabelAndImageForCell: UIView {
     
     @IBOutlet weak var rightImage: UIImageView!
     @IBOutlet weak var leftImage: UIImageView!
+    @IBOutlet weak var textLabel: UILabel!
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)

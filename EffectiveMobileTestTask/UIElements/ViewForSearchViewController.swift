@@ -12,6 +12,8 @@ class ViewForSearchViewController: UIView {
     @IBOutlet weak var fastFiltersCollectionView: UICollectionView!
     @IBOutlet weak var collectionViewHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak var vacancyCollectionView: UICollectionView!
+    @IBOutlet weak var mainView: UIView!
+    var dataArray : JsonRequestData?
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
@@ -27,10 +29,9 @@ class ViewForSearchViewController: UIView {
     }
     
     override func layoutSubviews() {
-        collectionViewHeightConstraint.constant = vacancyCollectionView.contentSize.height
+        vacancyCollectionView.isScrollEnabled = false
         if let flowLayout = vacancyCollectionView.collectionViewLayout as? UICollectionViewFlowLayout {
             flowLayout.estimatedItemSize = UICollectionViewFlowLayout.automaticSize
-
         }
     }
     
@@ -52,10 +53,11 @@ extension ViewForSearchViewController: UICollectionViewDelegate, UICollectionVie
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        guard let dataArray = dataArray else { return 0 }
         if collectionView == fastFiltersCollectionView {
-            return StaticDataForFastFilters.data.count
+            return dataArray.offers.count
         } else {
-            return 3
+            return 4
         }
     }
     
@@ -63,22 +65,61 @@ extension ViewForSearchViewController: UICollectionViewDelegate, UICollectionVie
         if collectionView == fastFiltersCollectionView {
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "FastFiltersCell", for: indexPath) as? FastFiltersCell else { return FastFiltersCell() }
             cell.layer.cornerRadius = 8
-            cell.imageView.image = StaticDataForFastFilters.data[indexPath.row].image
-            cell.imageView.backgroundColor = StaticDataForFastFilters.data[indexPath.row].imageBackground
-            cell.textLabel.attributedText = StaticDataForFastFilters.data[indexPath.row].text
-            if let text = StaticDataForFastFilters.data[indexPath.row].secondaryText {
-                cell.upInSearchLabel.isHidden = false
-                cell.upInSearchLabel.attributedText = text
-                cell.textLabel.lineBreakMode = .byTruncatingTail
-            } else {
-                cell.bottomTextLabelConstraint.isActive = false
+            if indexPath.row < StaticDataForFastFilters.data.count {
+                cell.imageView.image = StaticDataForFastFilters.data[indexPath.row].image
+                cell.imageView.backgroundColor = StaticDataForFastFilters.data[indexPath.row].imageBackground
+                cell.textLabel.attributedText = StaticDataForFastFilters.data[indexPath.row].text
+                if let text = StaticDataForFastFilters.data[indexPath.row].secondaryText {
+                    cell.upInSearchLabel.isHidden = false
+                    cell.upInSearchLabel.attributedText = text
+                    cell.textLabel.lineBreakMode = .byTruncatingTail
+                } else {
+                    cell.bottomTextLabelConstraint.isActive = false
+                }
             }
             return cell
         } else {
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "VacancyCell", for: indexPath) as? VacancyCell else { return VacancyCell() }
+            guard let dataArray = dataArray else { return VacancyCell() }
             cell.layer.cornerRadius = 8
             cell.companyView.leftImage.isHidden = true
             cell.experienceView.rightImage.isHidden = true
+            if let numberViews = dataArray.vacancies[indexPath.row].lookingNumber {
+                switch numberViews {
+                case 2:
+                    cell.numberViews.text = "Сейчас просматривает \(numberViews) человека"
+                default:
+                    cell.numberViews.text = "Сейчас просматривает \(numberViews) человек"
+                }
+            } else {
+                cell.numberViews.isHidden = true
+            }
+            cell.postLaber.text = dataArray.vacancies[indexPath.row].title
+            if let salary = dataArray.vacancies[indexPath.row].salary.short {
+                cell.salaryLabel.text = salary
+            } else {
+                cell.salaryLabel.isHidden = true
+            }
+            cell.cityLabel.text = dataArray.vacancies[indexPath.row].address.town
+            cell.companyView.textLabel.text = dataArray.vacancies[indexPath.row].company
+            cell.experienceView.textLabel.text = dataArray.vacancies[indexPath.row].experience.previewText
+            let dateFormater = DateFormatter()
+            dateFormater.locale = Locale(identifier: "ru_RU")
+            dateFormater.dateFormat = "yyyy-MM-dd"
+            let date = dateFormater.date(from: dataArray.vacancies[indexPath.row].publishedDate)
+            if let date = date {
+                let dayMonthFormatter = DateFormatter()
+                dayMonthFormatter.locale = Locale(identifier: "ru_RU")
+                dayMonthFormatter.dateFormat = "d MMMM"
+                    
+                let dayMonthString = dayMonthFormatter.string(from: date)
+                cell.dateOfPublishLabel.text = "Опубликовано \(dayMonthString)"
+            }
+            if dataArray.vacancies[indexPath.row].isFavorite {
+                cell.likeImage.image = UIImage(named: "Like.fill")
+            } else {
+                cell.likeImage.image = UIImage(named: "Like")
+            }
             return cell
         }
     }

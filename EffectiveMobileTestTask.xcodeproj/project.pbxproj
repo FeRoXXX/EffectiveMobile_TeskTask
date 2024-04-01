@@ -40,11 +40,13 @@
 		2708D3812BB71369000CC035 /* FastFiltersCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2708D37F2BB71368000CC035 /* FastFiltersCell.xib */; };
 		2708D3842BB7FEDD000CC035 /* StaticDataForFastFilters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2708D3832BB7FEDD000CC035 /* StaticDataForFastFilters.swift */; };
 		2708D38E2BB936EC000CC035 /* ViewForSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2708D38D2BB936EC000CC035 /* ViewForSearchViewController.swift */; };
-		2708D3902BB9370E000CC035 /* ViewForSearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2708D38F2BB9370E000CC035 /* ViewForSearchViewController.xib */; };
 		2708D3952BB9A927000CC035 /* VacancyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2708D3932BB9A927000CC035 /* VacancyCell.swift */; };
 		2708D3962BB9A927000CC035 /* VacancyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2708D3942BB9A927000CC035 /* VacancyCell.xib */; };
 		2708D3982BB9B4FC000CC035 /* LabelAndImageForCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2708D3972BB9B4FC000CC035 /* LabelAndImageForCell.swift */; };
 		2708D39A2BB9B531000CC035 /* LabelAndImageForCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2708D3992BB9B531000CC035 /* LabelAndImageForCell.xib */; };
+		2708D39C2BB9CD0E000CC035 /* request.json in Resources */ = {isa = PBXBuildFile; fileRef = 2708D39B2BB9CD0E000CC035 /* request.json */; };
+		2708D3A02BB9CD9F000CC035 /* JsonRequestData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2708D39F2BB9CD9F000CC035 /* JsonRequestData.swift */; };
+		27E1C7F82BBAF5E300209D70 /* ViewForSearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27E1C7F72BBAF5E300209D70 /* ViewForSearchViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -83,11 +85,13 @@
 		2708D37F2BB71368000CC035 /* FastFiltersCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FastFiltersCell.xib; sourceTree = "<group>"; };
 		2708D3832BB7FEDD000CC035 /* StaticDataForFastFilters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaticDataForFastFilters.swift; sourceTree = "<group>"; };
 		2708D38D2BB936EC000CC035 /* ViewForSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewForSearchViewController.swift; sourceTree = "<group>"; };
-		2708D38F2BB9370E000CC035 /* ViewForSearchViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ViewForSearchViewController.xib; sourceTree = "<group>"; };
 		2708D3932BB9A927000CC035 /* VacancyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VacancyCell.swift; sourceTree = "<group>"; };
 		2708D3942BB9A927000CC035 /* VacancyCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VacancyCell.xib; sourceTree = "<group>"; };
 		2708D3972BB9B4FC000CC035 /* LabelAndImageForCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelAndImageForCell.swift; sourceTree = "<group>"; };
 		2708D3992BB9B531000CC035 /* LabelAndImageForCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LabelAndImageForCell.xib; sourceTree = "<group>"; };
+		2708D39B2BB9CD0E000CC035 /* request.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = request.json; path = ../../Desktop/request.json; sourceTree = "<group>"; };
+		2708D39F2BB9CD9F000CC035 /* JsonRequestData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonRequestData.swift; sourceTree = "<group>"; };
+		27E1C7F72BBAF5E300209D70 /* ViewForSearchViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ViewForSearchViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +141,7 @@
 				2708D32A2BB57D63000CC035 /* LaunchScreen.storyboard */,
 				2708D32D2BB57D63000CC035 /* Info.plist */,
 				2708D3252BB57D61000CC035 /* EffectiveMobileTestTask.xcdatamodeld */,
+				2708D39B2BB9CD0E000CC035 /* request.json */,
 			);
 			path = EffectiveMobileTestTask;
 			sourceTree = "<group>";
@@ -219,7 +224,7 @@
 				2708D38D2BB936EC000CC035 /* ViewForSearchViewController.swift */,
 				2708D3932BB9A927000CC035 /* VacancyCell.swift */,
 				2708D3942BB9A927000CC035 /* VacancyCell.xib */,
-				2708D38F2BB9370E000CC035 /* ViewForSearchViewController.xib */,
+				27E1C7F72BBAF5E300209D70 /* ViewForSearchViewController.xib */,
 				2708D3972BB9B4FC000CC035 /* LabelAndImageForCell.swift */,
 				2708D3992BB9B531000CC035 /* LabelAndImageForCell.xib */,
 			);
@@ -247,6 +252,7 @@
 			isa = PBXGroup;
 			children = (
 				2708D3832BB7FEDD000CC035 /* StaticDataForFastFilters.swift */,
+				2708D39F2BB9CD9F000CC035 /* JsonRequestData.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -314,8 +320,9 @@
 				2708D3612BB5B0C6000CC035 /* LoginView.xib in Resources */,
 				2708D3672BB5C17B000CC035 /* AuthenticationView.xib in Resources */,
 				2708D34E2BB5877B000CC035 /* MessagesViewController.xib in Resources */,
-				2708D3902BB9370E000CC035 /* ViewForSearchViewController.xib in Resources */,
+				27E1C7F82BBAF5E300209D70 /* ViewForSearchViewController.xib in Resources */,
 				2708D39A2BB9B531000CC035 /* LabelAndImageForCell.xib in Resources */,
+				2708D39C2BB9CD0E000CC035 /* request.json in Resources */,
 				2708D3632BB5B5D5000CC035 /* FindEmployee.xib in Resources */,
 				2708D32C2BB57D63000CC035 /* LaunchScreen.storyboard in Resources */,
 				2708D36F2BB5CB30000CC035 /* CodeIntroductionElementsViewController.xib in Resources */,
@@ -344,6 +351,7 @@
 				2708D3652BB5C171000CC035 /* AuthenticationView.swift in Sources */,
 				2708D3802BB71369000CC035 /* FastFiltersCell.swift in Sources */,
 				2708D3982BB9B4FC000CC035 /* LabelAndImageForCell.swift in Sources */,
+				2708D3A02BB9CD9F000CC035 /* JsonRequestData.swift in Sources */,
 				2708D3452BB5874C000CC035 /* FavoritesViewController.swift in Sources */,
 				2708D3492BB5875B000CC035 /* ResponsesViewController.swift in Sources */,
 				2708D3512BB58786000CC035 /* ProfileViewController.swift in Sources */,

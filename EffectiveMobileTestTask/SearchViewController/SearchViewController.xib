@@ -10,6 +10,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SearchViewController" customModule="EffectiveMobileTestTask" customModuleProvider="target">
             <connections>
                 <outlet property="authenticationView" destination="g7i-qs-iIE" id="w5h-jn-WuH"/>
+                <outlet property="mainView" destination="QDE-yM-xSQ" id="8LV-5t-hKI"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>

@@ -11,6 +11,7 @@
             <connections>
                 <outlet property="leftImage" destination="D2e-9j-Mb7" id="3wu-EW-slA"/>
                 <outlet property="rightImage" destination="cc2-36-XHu" id="Civ-CT-CSe"/>
+                <outlet property="textLabel" destination="Z3C-vU-DIx" id="vYi-YY-mxP"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>

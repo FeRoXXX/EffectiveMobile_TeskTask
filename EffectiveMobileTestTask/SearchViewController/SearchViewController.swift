@@ -9,6 +9,7 @@ import UIKit
 
 class SearchViewController: UIViewController {
     @IBOutlet weak var authenticationView: AuthenticationView!
+    @IBOutlet weak var mainView: ViewForSearchViewController!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -16,6 +17,7 @@ class SearchViewController: UIViewController {
             guard let self = self else { return }
             goToEmailConfirmation()
         }
+
     }
     
     override func viewDidDisappear(_ animated: Bool) {
@@ -27,7 +29,13 @@ class SearchViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         if UserDefaults().bool(forKey: "isUserLoggedIn") {
             authenticationView.isHidden = true
+            let dataArray = JsonRequestData.getDataFromJson()
+            mainView.dataArray = dataArray
         }
+    }
+    
+    override func viewDidLayoutSubviews() {
+        mainView.collectionViewHeightConstraint.constant = mainView.vacancyCollectionView.contentSize.height
     }
 
 }

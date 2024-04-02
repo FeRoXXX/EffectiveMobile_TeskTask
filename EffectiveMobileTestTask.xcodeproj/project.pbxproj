@@ -47,6 +47,10 @@
 		2708D39C2BB9CD0E000CC035 /* request.json in Resources */ = {isa = PBXBuildFile; fileRef = 2708D39B2BB9CD0E000CC035 /* request.json */; };
 		2708D3A02BB9CD9F000CC035 /* JsonRequestData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2708D39F2BB9CD9F000CC035 /* JsonRequestData.swift */; };
 		27E1C7F82BBAF5E300209D70 /* ViewForSearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27E1C7F72BBAF5E300209D70 /* ViewForSearchViewController.xib */; };
+		27E1C7FD2BBBCFC800209D70 /* VacancyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E1C7FB2BBBCFC800209D70 /* VacancyViewController.swift */; };
+		27E1C7FE2BBBCFC800209D70 /* VacancyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27E1C7FC2BBBCFC800209D70 /* VacancyViewController.xib */; };
+		27E1C8082BBC43DA00209D70 /* CompanyPositionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E1C8072BBC43DA00209D70 /* CompanyPositionView.swift */; };
+		27E1C80A2BBC43E600209D70 /* CompanyPositionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27E1C8092BBC43E600209D70 /* CompanyPositionView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -92,6 +96,10 @@
 		2708D39B2BB9CD0E000CC035 /* request.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = request.json; path = ../../Desktop/request.json; sourceTree = "<group>"; };
 		2708D39F2BB9CD9F000CC035 /* JsonRequestData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonRequestData.swift; sourceTree = "<group>"; };
 		27E1C7F72BBAF5E300209D70 /* ViewForSearchViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ViewForSearchViewController.xib; sourceTree = "<group>"; };
+		27E1C7FB2BBBCFC800209D70 /* VacancyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VacancyViewController.swift; sourceTree = "<group>"; };
+		27E1C7FC2BBBCFC800209D70 /* VacancyViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VacancyViewController.xib; sourceTree = "<group>"; };
+		27E1C8072BBC43DA00209D70 /* CompanyPositionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyPositionView.swift; sourceTree = "<group>"; };
+		27E1C8092BBC43E600209D70 /* CompanyPositionView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CompanyPositionView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +132,7 @@
 		2708D31B2BB57D61000CC035 /* EffectiveMobileTestTask */ = {
 			isa = PBXGroup;
 			children = (
+				27E1C7FA2BBBCFAA00209D70 /* VacancyViewController */,
 				2708D3822BB7FEBD000CC035 /* Data */,
 				2708D36B2BB5CAF1000CC035 /* CodeIntroductionViewController */,
 				2708D3682BB5C972000CC035 /* Protocols */,
@@ -227,6 +236,8 @@
 				27E1C7F72BBAF5E300209D70 /* ViewForSearchViewController.xib */,
 				2708D3972BB9B4FC000CC035 /* LabelAndImageForCell.swift */,
 				2708D3992BB9B531000CC035 /* LabelAndImageForCell.xib */,
+				27E1C8072BBC43DA00209D70 /* CompanyPositionView.swift */,
+				27E1C8092BBC43E600209D70 /* CompanyPositionView.xib */,
 			);
 			path = UIElements;
 			sourceTree = "<group>";
@@ -255,6 +266,15 @@
 				2708D39F2BB9CD9F000CC035 /* JsonRequestData.swift */,
 			);
 			path = Data;
+			sourceTree = "<group>";
+		};
+		27E1C7FA2BBBCFAA00209D70 /* VacancyViewController */ = {
+			isa = PBXGroup;
+			children = (
+				27E1C7FB2BBBCFC800209D70 /* VacancyViewController.swift */,
+				27E1C7FC2BBBCFC800209D70 /* VacancyViewController.xib */,
+			);
+			path = VacancyViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -323,7 +343,9 @@
 				27E1C7F82BBAF5E300209D70 /* ViewForSearchViewController.xib in Resources */,
 				2708D39A2BB9B531000CC035 /* LabelAndImageForCell.xib in Resources */,
 				2708D39C2BB9CD0E000CC035 /* request.json in Resources */,
+				27E1C7FE2BBBCFC800209D70 /* VacancyViewController.xib in Resources */,
 				2708D3632BB5B5D5000CC035 /* FindEmployee.xib in Resources */,
+				27E1C80A2BBC43E600209D70 /* CompanyPositionView.xib in Resources */,
 				2708D32C2BB57D63000CC035 /* LaunchScreen.storyboard in Resources */,
 				2708D36F2BB5CB30000CC035 /* CodeIntroductionElementsViewController.xib in Resources */,
 				2708D3292BB57D63000CC035 /* Assets.xcassets in Resources */,
@@ -343,6 +365,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2708D34D2BB5877B000CC035 /* MessagesViewController.swift in Sources */,
+				27E1C8082BBC43DA00209D70 /* CompanyPositionView.swift in Sources */,
 				2708D3272BB57D61000CC035 /* EffectiveMobileTestTask.xcdatamodeld in Sources */,
 				2708D3412BB5873A000CC035 /* SearchViewController.swift in Sources */,
 				2708D3842BB7FEDD000CC035 /* StaticDataForFastFilters.swift in Sources */,
@@ -360,6 +383,7 @@
 				2708D38E2BB936EC000CC035 /* ViewForSearchViewController.swift in Sources */,
 				2708D31D2BB57D61000CC035 /* AppDelegate.swift in Sources */,
 				2708D3372BB580D1000CC035 /* TabBarController.swift in Sources */,
+				27E1C7FD2BBBCFC800209D70 /* VacancyViewController.swift in Sources */,
 				2708D3352BB58074000CC035 /* NavigationViewController.swift in Sources */,
 				2708D31F2BB57D61000CC035 /* SceneDelegate.swift in Sources */,
 				2708D36E2BB5CB30000CC035 /* CodeIntroductionElementsViewController.swift in Sources */,

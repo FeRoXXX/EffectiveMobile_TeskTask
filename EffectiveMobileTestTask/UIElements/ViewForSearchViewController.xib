@@ -24,7 +24,7 @@
                     <rect key="frame" x="0.0" y="0.0" width="393" height="725"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bit-nP-qZm">
-                            <rect key="frame" x="0.0" y="0.0" width="393" height="417.33333333333331"/>
+                            <rect key="frame" x="0.0" y="0.0" width="393" height="451.33333333333331"/>
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" horizontalCompressionResistancePriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ge2-r8-qDN">
                                     <rect key="frame" x="337" y="0.0" width="40" height="40"/>
@@ -83,14 +83,13 @@
                                     </constraints>
                                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="15" id="mmh-Dg-eiY">
                                         <size key="itemSize" width="361" height="233"/>
-                                        <size key="estimatedItemSize" width="361" height="233"/>
                                         <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                         <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                         <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                     </collectionViewFlowLayout>
                                 </collectionView>
                                 <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="753" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XFL-SE-bDX">
-                                    <rect key="frame" x="16" y="383" width="361" height="34.333333333333314"/>
+                                    <rect key="frame" x="16" y="417" width="361" height="34.333333333333314"/>
                                     <state key="normal" title="Button"/>
                                     <buttonConfiguration key="configuration" style="filled" title="Button"/>
                                 </button>
@@ -103,7 +102,7 @@
                                 <constraint firstItem="6iI-rv-xJv" firstAttribute="leading" secondItem="bit-nP-qZm" secondAttribute="leading" id="CV2-XI-WRf"/>
                                 <constraint firstItem="WdI-FW-CcZ" firstAttribute="top" secondItem="2ZH-bz-mxH" secondAttribute="bottom" constant="15" id="GDs-oF-jp3"/>
                                 <constraint firstItem="XFL-SE-bDX" firstAttribute="leading" secondItem="bit-nP-qZm" secondAttribute="leading" constant="16" id="Qyl-4b-fsA"/>
-                                <constraint firstItem="XFL-SE-bDX" firstAttribute="top" secondItem="WdI-FW-CcZ" secondAttribute="bottom" constant="8" id="Tf8-ws-t1x"/>
+                                <constraint firstItem="XFL-SE-bDX" firstAttribute="top" secondItem="WdI-FW-CcZ" secondAttribute="bottom" constant="42" id="Tf8-ws-t1x"/>
                                 <constraint firstAttribute="trailing" secondItem="6iI-rv-xJv" secondAttribute="trailing" id="ToL-V2-Zb5"/>
                                 <constraint firstItem="WdI-FW-CcZ" firstAttribute="leading" secondItem="bit-nP-qZm" secondAttribute="leading" constant="16" id="f9U-ge-oDT"/>
                                 <constraint firstItem="6iI-rv-xJv" firstAttribute="top" secondItem="ge2-r8-qDN" secondAttribute="bottom" constant="33" id="h31-QG-1hn"/>
@@ -135,7 +134,7 @@
                 <constraint firstItem="WHq-Gz-iC4" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="c0S-PR-xI5"/>
             </constraints>
             <nil key="simulatedTopBarMetrics"/>
-            <point key="canvasLocation" x="224" y="-20"/>
+            <point key="canvasLocation" x="223.66412213740458" y="-20.422535211267608"/>
         </view>
     </objects>
     <designables>

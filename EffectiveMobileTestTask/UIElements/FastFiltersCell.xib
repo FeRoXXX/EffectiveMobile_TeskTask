@@ -22,32 +22,34 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2Ey-pM-kyS">
                                 <rect key="frame" x="8" y="10" width="32" height="32"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="757" text="Поднять резюме в поиске" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" minimumScaleFactor="0.25" translatesAutoresizingMaskIntoConstraints="NO" id="yEJ-0k-ibW">
-                                <rect key="frame" x="8" y="58" width="112" height="34"/>
-                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <nil key="highlightedColor"/>
-                                <lineBreakStrategy key="lineBreakStrategy" hangulWordPriority="YES"/>
-                            </label>
-                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="256" verticalCompressionResistancePriority="756" text="Поднять" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aj0-Sw-Y9Y">
-                                <rect key="frame" x="8" y="92" width="112" height="17"/>
-                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
-                                <color key="textColor" red="0.40784314269999999" green="0.69019609689999994" blue="0.35294118520000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="bmN-Ho-8V1">
+                                <rect key="frame" x="8" y="58" width="114" height="51"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="757" text="Поднять резюме в поиске" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" minimumScaleFactor="0.25" translatesAutoresizingMaskIntoConstraints="NO" id="yEJ-0k-ibW">
+                                        <rect key="frame" x="0.0" y="0.0" width="114" height="33.666666666666664"/>
+                                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                        <lineBreakStrategy key="lineBreakStrategy" hangulWordPriority="YES"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="256" verticalCompressionResistancePriority="756" text="Поднять" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aj0-Sw-Y9Y">
+                                        <rect key="frame" x="0.0" y="33.666666666666671" width="114" height="17.333333333333329"/>
+                                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
+                                        <color key="textColor" red="0.40784314269999999" green="0.69019609689999994" blue="0.35294118520000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="0.13333332540000001" green="0.13725490870000001" blue="0.14509806040000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstItem="aj0-Sw-Y9Y" firstAttribute="top" secondItem="yEJ-0k-ibW" secondAttribute="bottom" id="BpW-Ux-5Ub"/>
-                            <constraint firstAttribute="trailing" secondItem="yEJ-0k-ibW" secondAttribute="trailing" constant="12" id="F8r-98-FAJ"/>
+                            <constraint firstItem="bmN-Ho-8V1" firstAttribute="top" secondItem="2Ey-pM-kyS" secondAttribute="bottom" constant="16" id="7hr-qy-yHG"/>
+                            <constraint firstAttribute="trailing" secondItem="bmN-Ho-8V1" secondAttribute="trailing" constant="10" id="ALQ-lS-JFE"/>
+                            <constraint firstItem="bmN-Ho-8V1" firstAttribute="leading" secondItem="Zot-Fh-OLr" secondAttribute="leading" constant="8" id="Cf4-gh-7tw"/>
                             <constraint firstItem="2Ey-pM-kyS" firstAttribute="leading" secondItem="Zot-Fh-OLr" secondAttribute="leading" constant="8" id="KJq-Ho-Rxq"/>
                             <constraint firstAttribute="trailing" secondItem="2Ey-pM-kyS" secondAttribute="trailing" constant="92" id="LLW-9D-8gp"/>
-                            <constraint firstItem="yEJ-0k-ibW" firstAttribute="leading" secondItem="Zot-Fh-OLr" secondAttribute="leading" constant="8" id="UQb-TH-1K5"/>
                             <constraint firstAttribute="bottom" secondItem="2Ey-pM-kyS" secondAttribute="bottom" constant="78" id="Y3s-qn-vZT"/>
-                            <constraint firstAttribute="bottom" secondItem="aj0-Sw-Y9Y" secondAttribute="bottom" constant="11" id="bkX-i3-vkb"/>
-                            <constraint firstItem="yEJ-0k-ibW" firstAttribute="top" secondItem="Zot-Fh-OLr" secondAttribute="top" constant="58" id="jkd-ES-La3"/>
-                            <constraint firstItem="aj0-Sw-Y9Y" firstAttribute="leading" secondItem="Zot-Fh-OLr" secondAttribute="leading" constant="8" id="uMo-nK-QFd"/>
-                            <constraint firstAttribute="trailing" secondItem="aj0-Sw-Y9Y" secondAttribute="trailing" constant="12" id="vK0-7f-YDN"/>
+                            <constraint firstAttribute="bottom" secondItem="bmN-Ho-8V1" secondAttribute="bottom" constant="11" id="n8n-vb-PHz"/>
                             <constraint firstItem="2Ey-pM-kyS" firstAttribute="top" secondItem="Zot-Fh-OLr" secondAttribute="top" constant="10" id="zK3-rz-N7I"/>
                         </constraints>
                     </view>
@@ -61,7 +63,6 @@
                 <constraint firstItem="Zot-Fh-OLr" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="xvy-eG-RAa"/>
             </constraints>
             <connections>
-                <outlet property="bottomTextLabelConstraint" destination="BpW-Ux-5Ub" id="aJl-PF-iKr"/>
                 <outlet property="imageView" destination="2Ey-pM-kyS" id="AdG-pC-eQI"/>
                 <outlet property="textLabel" destination="yEJ-0k-ibW" id="vfa-9f-x1N"/>
                 <outlet property="upInSearchLabel" destination="aj0-Sw-Y9Y" id="AOe-8e-mxO"/>

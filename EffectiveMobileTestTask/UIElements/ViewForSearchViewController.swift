@@ -14,6 +14,7 @@ class ViewForSearchViewController: UIView {
     @IBOutlet weak var vacancyCollectionView: UICollectionView!
     @IBOutlet weak var mainView: UIView!
     var dataArray : JsonRequestData?
+    var openVacancy : ((UUID) -> Void)?
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
@@ -57,7 +58,7 @@ extension ViewForSearchViewController: UICollectionViewDelegate, UICollectionVie
         if collectionView == fastFiltersCollectionView {
             return dataArray.offers.count
         } else {
-            return 4
+            return 3
         }
     }
     
@@ -65,16 +66,19 @@ extension ViewForSearchViewController: UICollectionViewDelegate, UICollectionVie
         if collectionView == fastFiltersCollectionView {
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "FastFiltersCell", for: indexPath) as? FastFiltersCell else { return FastFiltersCell() }
             cell.layer.cornerRadius = 8
-            if indexPath.row < StaticDataForFastFilters.data.count {
-                cell.imageView.image = StaticDataForFastFilters.data[indexPath.row].image
-                cell.imageView.backgroundColor = StaticDataForFastFilters.data[indexPath.row].imageBackground
-                cell.textLabel.attributedText = StaticDataForFastFilters.data[indexPath.row].text
-                if let text = StaticDataForFastFilters.data[indexPath.row].secondaryText {
+            guard let dataArray = dataArray else { return FastFiltersCell() }
+            if indexPath.row < dataArray.offers.count {
+                if StaticDataForFastFilters.data.count > indexPath.row {
+                    cell.imageView.image = StaticDataForFastFilters.data[indexPath.row].image
+                    cell.imageView.backgroundColor = StaticDataForFastFilters.data[indexPath.row].imageBackground
+                }
+                cell.textLabel.text = dataArray.offers[indexPath.row].title
+                if let button = dataArray.offers[indexPath.row].button {
                     cell.upInSearchLabel.isHidden = false
-                    cell.upInSearchLabel.attributedText = text
+                    cell.upInSearchLabel.text = button.text
                     cell.textLabel.lineBreakMode = .byTruncatingTail
                 } else {
-                    cell.bottomTextLabelConstraint.isActive = false
+                    cell.upInSearchLabel.isHidden = true
                 }
             }
             return cell
@@ -121,6 +125,14 @@ extension ViewForSearchViewController: UICollectionViewDelegate, UICollectionVie
                 cell.likeImage.image = UIImage(named: "Like")
             }
             return cell
+        }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if collectionView == vacancyCollectionView {
+            guard let dataArray = dataArray else { return }
+            let id = dataArray.vacancies[indexPath.row].id
+            openVacancy?(id)
         }
     }
     

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Map view configurations" minToolsVersion="14.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CompanyPositionView" customModule="EffectiveMobileTestTask" customModuleProvider="target">
+            <connections>
+                <outlet property="addressLabel" destination="b9o-mT-hEd" id="HXQ-bq-HQg"/>
+                <outlet property="companyLabel" destination="kWX-fG-Sdm" id="CVp-gO-zI4"/>
+                <outlet property="mapView" destination="U8x-op-f6N" id="0S2-wR-bqG"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="361" height="134"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="DvM-Fr-EPz">
+                    <rect key="frame" x="16" y="12" width="64.666666666666671" height="16"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kWX-fG-Sdm">
+                            <rect key="frame" x="0.0" y="0.0" width="40.666666666666664" height="16"/>
+                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Check.mark" translatesAutoresizingMaskIntoConstraints="NO" id="dcM-D7-C5A">
+                            <rect key="frame" x="48.666666666666671" y="0.0" width="16" height="16"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="16" id="Ha5-Dq-fNo"/>
+                                <constraint firstAttribute="height" constant="16" id="Pg3-Pr-h92"/>
+                                <constraint firstAttribute="width" secondItem="dcM-D7-C5A" secondAttribute="height" multiplier="1:1" id="hUj-PG-swz"/>
+                            </constraints>
+                        </imageView>
+                    </subviews>
+                </stackView>
+                <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U8x-op-f6N">
+                    <rect key="frame" x="16" y="36" width="329" height="61"/>
+                    <standardMapConfiguration key="preferredConfiguration"/>
+                </mapView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b9o-mT-hEd">
+                    <rect key="frame" x="16.000000000000004" y="105" width="35.333333333333343" height="17"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" red="0.13333332540000001" green="0.13725490870000001" blue="0.14509806040000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <constraints>
+                <constraint firstItem="U8x-op-f6N" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="B8T-2C-CXn"/>
+                <constraint firstItem="U8x-op-f6N" firstAttribute="top" secondItem="DvM-Fr-EPz" secondAttribute="bottom" constant="8" id="Kii-NJ-bCd"/>
+                <constraint firstItem="b9o-mT-hEd" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="NUr-uC-qI5"/>
+                <constraint firstItem="DvM-Fr-EPz" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="kAv-Fi-lCY"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="U8x-op-f6N" secondAttribute="trailing" constant="16" id="noR-Xz-Tgz"/>
+                <constraint firstAttribute="bottom" secondItem="b9o-mT-hEd" secondAttribute="bottom" constant="12" id="sKN-Us-D9C"/>
+                <constraint firstItem="DvM-Fr-EPz" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="12" id="tsW-jQ-AGc"/>
+                <constraint firstItem="b9o-mT-hEd" firstAttribute="top" secondItem="U8x-op-f6N" secondAttribute="bottom" constant="8" id="ycF-fP-sox"/>
+            </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-10" y="-11"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="Check.mark" width="16" height="16"/>
+    </resources>
+</document>

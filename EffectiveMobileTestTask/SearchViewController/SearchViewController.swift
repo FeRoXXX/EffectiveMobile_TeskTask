@@ -10,12 +10,17 @@ import UIKit
 class SearchViewController: UIViewController {
     @IBOutlet weak var authenticationView: AuthenticationView!
     @IBOutlet weak var mainView: ViewForSearchViewController!
+    let dataArray = JsonRequestData.getDataFromJson()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         authenticationView.nextButtonClicked = { [weak self] in
             guard let self = self else { return }
             goToEmailConfirmation()
+        }
+        mainView.openVacancy = { [weak self] id in
+            guard let self = self else { return }
+            openCell(id: id)
         }
 
     }
@@ -29,7 +34,6 @@ class SearchViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         if UserDefaults().bool(forKey: "isUserLoggedIn") {
             authenticationView.isHidden = true
-            let dataArray = JsonRequestData.getDataFromJson()
             mainView.dataArray = dataArray
         }
     }
@@ -38,6 +42,25 @@ class SearchViewController: UIViewController {
         mainView.collectionViewHeightConstraint.constant = mainView.vacancyCollectionView.contentSize.height
     }
 
+}
+
+extension SearchViewController {
+    private func openCell(id: UUID) {
+        guard let navigationController = navigationController,
+              let dataArray = dataArray else { return }
+        var data : Vacancy?
+        for item in dataArray.vacancies {
+            if item.id == id {
+                data = item
+                break
+            }
+        }
+        let viewController = VacancyViewController()
+        viewController.id = id
+        viewController.data = data
+        navigationController.pushViewController(viewController, animated: true)
+        navigationController.setNavigationBarHidden(false, animated: true)
+    }
 }
 
 extension SearchViewController: AuthenticationProtocol {

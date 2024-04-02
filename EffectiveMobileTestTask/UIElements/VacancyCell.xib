@@ -9,7 +9,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="VacancyCell" translatesAutoresizingMaskIntoConstraints="NO" id="gTV-IL-0wX" customClass="VacancyCell" customModule="EffectiveMobileTestTask" customModuleProvider="target">
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" horizontalHuggingPriority="244" verticalHuggingPriority="240" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" reuseIdentifier="VacancyCell" translatesAutoresizingMaskIntoConstraints="NO" id="gTV-IL-0wX" customClass="VacancyCell" customModule="EffectiveMobileTestTask" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="361" height="292"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                 <rect key="frame" x="0.0" y="0.0" width="361" height="292"/>
@@ -39,7 +39,7 @@
                                         <color key="textColor" red="0.40784314269999999" green="0.69019609689999994" blue="0.35294118520000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" text="Должность" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OGZ-yO-Bha">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Должность" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OGZ-yO-Bha">
                                         <rect key="frame" x="0.0" y="27" width="252" height="20.333333333333329"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -52,16 +52,19 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ine-AT-Mei" customClass="LabelAndImageForCell" customModule="EffectiveMobileTestTask" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="87.666666666666671" width="252" height="27"/>
+                                        <rect key="frame" x="0.0" y="87.666666666666671" width="252" height="24.333333333333329"/>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Город" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b6Y-hS-VZO">
-                                        <rect key="frame" x="0.0" y="124.66666666666664" width="252" height="20.333333333333329"/>
+                                        <rect key="frame" x="0.0" y="121.99999999999999" width="252" height="20.333333333333329"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="20.329999999999998" id="Ou9-dX-scJ"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gop-iZ-RVg" customClass="LabelAndImageForCell" customModule="EffectiveMobileTestTask" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="155" width="252" height="21.666666666666657"/>
+                                        <rect key="frame" x="0.0" y="152.33333333333334" width="252" height="24.333333333333343"/>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Дата публикации" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XHA-x0-K9y">
                                         <rect key="frame" x="0.0" y="186.66666666666666" width="252" height="20.333333333333343"/>
@@ -71,8 +74,7 @@
                                     </label>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="XHA-x0-K9y" firstAttribute="top" secondItem="Gop-iZ-RVg" secondAttribute="bottom" constant="10" id="4dR-mZ-vjy"/>
-                                    <constraint firstItem="Gop-iZ-RVg" firstAttribute="height" secondItem="Ine-AT-Mei" secondAttribute="height" multiplier="0.813333" id="4xw-cz-juk"/>
+                                    <constraint firstItem="Ine-AT-Mei" firstAttribute="height" secondItem="Gop-iZ-RVg" secondAttribute="height" id="10z-wV-kCo"/>
                                 </constraints>
                             </stackView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Like" translatesAutoresizingMaskIntoConstraints="NO" id="uo2-xP-GDw">
@@ -85,7 +87,6 @@
                         </subviews>
                         <color key="backgroundColor" red="0.13333332540000001" green="0.13725490870000001" blue="0.14509806040000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="uo2-xP-GDw" secondAttribute="bottom" constant="252" id="0FJ-7M-B09"/>
                             <constraint firstItem="gc8-Ba-uzU" firstAttribute="top" secondItem="Jf6-cj-17k" secondAttribute="top" constant="16" id="ISy-rx-fhB"/>
                             <constraint firstAttribute="trailing" secondItem="gc8-Ba-uzU" secondAttribute="trailing" constant="93" id="Lu9-UI-sdr"/>
                             <constraint firstAttribute="trailing" secondItem="j8b-Oc-6UA" secondAttribute="trailing" constant="16" id="O9f-D4-ivF"/>

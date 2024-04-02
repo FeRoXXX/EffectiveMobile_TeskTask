@@ -39,7 +39,7 @@
                         </imageView>
                     </subviews>
                 </stackView>
-                <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U8x-op-f6N">
+                <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U8x-op-f6N">
                     <rect key="frame" x="16" y="36" width="329" height="61"/>
                     <standardMapConfiguration key="preferredConfiguration"/>
                 </mapView>

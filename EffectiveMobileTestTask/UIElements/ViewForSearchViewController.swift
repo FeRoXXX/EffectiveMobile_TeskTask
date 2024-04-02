@@ -13,6 +13,7 @@ class ViewForSearchViewController: UIView {
     @IBOutlet weak var collectionViewHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak var vacancyCollectionView: UICollectionView!
     @IBOutlet weak var mainView: UIView!
+    @IBOutlet weak var moreButton: UIButton!
     var dataArray : JsonRequestData?
     var openVacancy : ((UUID) -> Void)?
     
@@ -27,6 +28,19 @@ class ViewForSearchViewController: UIView {
         let bundle = loadNibFromXib()
         
         addSubview(bundle)
+    }
+    
+    private func setupButton(count: Int) {
+        switch count {
+        case 0:
+            moreButton.setTitle("Это все вакансии", for: .normal)
+        case 1:
+            moreButton.setTitle("Ещё \(count) вакансия", for: .normal)
+        case 2...4:
+            moreButton.setTitle("Ещё \(count) вакансии", for: .normal)
+        default:
+            moreButton.setTitle("Ещё \(count) вакансий", for: .normal)
+        }
     }
     
     override func layoutSubviews() {
@@ -58,6 +72,7 @@ extension ViewForSearchViewController: UICollectionViewDelegate, UICollectionVie
         if collectionView == fastFiltersCollectionView {
             return dataArray.offers.count
         } else {
+            setupButton(count: dataArray.vacancies.count - 3)
             return 3
         }
     }

@@ -10,7 +10,8 @@ import UIKit
 class SearchViewController: UIViewController {
     @IBOutlet weak var authenticationView: AuthenticationView!
     @IBOutlet weak var mainView: ViewForSearchViewController!
-    let dataArray = JsonRequestData.getDataFromJson()
+    
+    var dataManager : DataManagerProtocol!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,7 +35,7 @@ class SearchViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         if UserDefaults().bool(forKey: "isUserLoggedIn") {
             authenticationView.isHidden = true
-            mainView.dataArray = dataArray
+            mainView.dataArray = dataManager.getDataFromJson()
         }
     }
     
@@ -46,15 +47,9 @@ class SearchViewController: UIViewController {
 
 extension SearchViewController {
     private func openCell(id: UUID) {
-        guard let navigationController = navigationController,
-              let dataArray = dataArray else { return }
-        var data : Vacancy?
-        for item in dataArray.vacancies {
-            if item.id == id {
-                data = item
-                break
-            }
-        }
+        guard let navigationController = navigationController else { return }
+        let data = dataManager.getDataFromJson(id: id)
+        
         let viewController = VacancyViewController()
         viewController.id = id
         viewController.data = data

@@ -11,7 +11,7 @@
             <connections>
                 <outlet property="collectionViewHeightConstraint" destination="wiQ-Yt-y38" id="GBg-6K-aoY"/>
                 <outlet property="fastFiltersCollectionView" destination="6iI-rv-xJv" id="Nd9-CN-pLk"/>
-                <outlet property="mainView" destination="bit-nP-qZm" id="ncz-HG-TMd"/>
+                <outlet property="moreButton" destination="XFL-SE-bDX" id="FMn-MC-4pR"/>
                 <outlet property="vacancyCollectionView" destination="WdI-FW-CcZ" id="ule-Wv-jVh"/>
             </connections>
         </placeholder>

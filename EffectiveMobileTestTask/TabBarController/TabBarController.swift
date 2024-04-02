@@ -18,11 +18,16 @@ class TabBarController: UITabBarController {
     private func setupTabBarItems() {
         navigationController?.setNavigationBarHidden(true, animated: true)
         navigationController?.setToolbarHidden(true, animated: true)
-        let searchController: UINavigationController = UINavigationController(rootViewController: SearchViewController())
+        let dataManager = DataManager()
+        let searchViewController = SearchViewController()
+        searchViewController.dataManager = dataManager
+        let searchController: UINavigationController = UINavigationController(rootViewController: searchViewController)
         searchController.setNavigationBarHidden(true, animated: true)
         searchController.title = "Поиск"
         searchController.tabBarItem.image = UIImage(named: "Search")
-        let favoritesController: UINavigationController = UINavigationController(rootViewController: FavoritesViewController())
+        let favoriteViewController = FavoritesViewController()
+        favoriteViewController.dataManager = dataManager
+        let favoritesController: UINavigationController = UINavigationController(rootViewController: favoriteViewController)
         favoritesController.setNavigationBarHidden(true, animated: true)
         favoritesController.title = "Избранное"
         favoritesController.tabBarItem.image = UIImage(named: "Like")

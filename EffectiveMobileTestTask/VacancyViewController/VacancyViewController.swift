@@ -109,10 +109,18 @@ extension VacancyViewController {
         navigationItem.leftBarButtonItem = backButton
         let shareButton = UIBarButtonItem(image: UIImage(named: "Share"), style: .done, target: self, action: .none)
         let eyeButton = UIBarButtonItem(image: UIImage(named: "Eye"), style: .done, target: self, action: .none)
-        let likeButton = UIBarButtonItem(image: UIImage(named: "Like"), style: .done, target: self, action: #selector(setLike))
+        var likeButton = UIBarButtonItem()
+        if let data = data {
+            if data.isFavorite {
+                likeButton = UIBarButtonItem(image: UIImage(named: "Like.fill"), style: .done, target: self, action: #selector(setLike))
+            } else {
+                likeButton = UIBarButtonItem(image: UIImage(named: "Like"), style: .done, target: self, action: #selector(setLike))
+                likeButton.tintColor = .white
+            }
+        }
         shareButton.tintColor = .white
         eyeButton.tintColor = .white
-        likeButton.tintColor = .white
+        
         navigationItem.rightBarButtonItems = [likeButton, shareButton, eyeButton]
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         self.navigationController?.navigationBar.shadowImage = UIImage()

@@ -51,6 +51,10 @@
 		27E1C7FE2BBBCFC800209D70 /* VacancyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27E1C7FC2BBBCFC800209D70 /* VacancyViewController.xib */; };
 		27E1C8082BBC43DA00209D70 /* CompanyPositionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E1C8072BBC43DA00209D70 /* CompanyPositionView.swift */; };
 		27E1C80A2BBC43E600209D70 /* CompanyPositionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27E1C8092BBC43E600209D70 /* CompanyPositionView.xib */; };
+		27E1C80F2BBC4F6D00209D70 /* ViewForFavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E1C80E2BBC4F6D00209D70 /* ViewForFavoriteViewController.swift */; };
+		27E1C8112BBC4F7200209D70 /* ViewForFavoriteViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27E1C8102BBC4F7200209D70 /* ViewForFavoriteViewController.xib */; };
+		27E1C8132BBC540300209D70 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E1C8122BBC540300209D70 /* DataManager.swift */; };
+		27E1C8152BBC542D00209D70 /* DataManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E1C8142BBC542D00209D70 /* DataManagerProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -100,6 +104,10 @@
 		27E1C7FC2BBBCFC800209D70 /* VacancyViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VacancyViewController.xib; sourceTree = "<group>"; };
 		27E1C8072BBC43DA00209D70 /* CompanyPositionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyPositionView.swift; sourceTree = "<group>"; };
 		27E1C8092BBC43E600209D70 /* CompanyPositionView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CompanyPositionView.xib; sourceTree = "<group>"; };
+		27E1C80E2BBC4F6D00209D70 /* ViewForFavoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewForFavoriteViewController.swift; sourceTree = "<group>"; };
+		27E1C8102BBC4F7200209D70 /* ViewForFavoriteViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ViewForFavoriteViewController.xib; sourceTree = "<group>"; };
+		27E1C8122BBC540300209D70 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		27E1C8142BBC542D00209D70 /* DataManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManagerProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -238,6 +246,8 @@
 				2708D3992BB9B531000CC035 /* LabelAndImageForCell.xib */,
 				27E1C8072BBC43DA00209D70 /* CompanyPositionView.swift */,
 				27E1C8092BBC43E600209D70 /* CompanyPositionView.xib */,
+				27E1C80E2BBC4F6D00209D70 /* ViewForFavoriteViewController.swift */,
+				27E1C8102BBC4F7200209D70 /* ViewForFavoriteViewController.xib */,
 			);
 			path = UIElements;
 			sourceTree = "<group>";
@@ -264,6 +274,8 @@
 			children = (
 				2708D3832BB7FEDD000CC035 /* StaticDataForFastFilters.swift */,
 				2708D39F2BB9CD9F000CC035 /* JsonRequestData.swift */,
+				27E1C8122BBC540300209D70 /* DataManager.swift */,
+				27E1C8142BBC542D00209D70 /* DataManagerProtocol.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -340,6 +352,7 @@
 				2708D3612BB5B0C6000CC035 /* LoginView.xib in Resources */,
 				2708D3672BB5C17B000CC035 /* AuthenticationView.xib in Resources */,
 				2708D34E2BB5877B000CC035 /* MessagesViewController.xib in Resources */,
+				27E1C8112BBC4F7200209D70 /* ViewForFavoriteViewController.xib in Resources */,
 				27E1C7F82BBAF5E300209D70 /* ViewForSearchViewController.xib in Resources */,
 				2708D39A2BB9B531000CC035 /* LabelAndImageForCell.xib in Resources */,
 				2708D39C2BB9CD0E000CC035 /* request.json in Resources */,
@@ -375,9 +388,11 @@
 				2708D3802BB71369000CC035 /* FastFiltersCell.swift in Sources */,
 				2708D3982BB9B4FC000CC035 /* LabelAndImageForCell.swift in Sources */,
 				2708D3A02BB9CD9F000CC035 /* JsonRequestData.swift in Sources */,
+				27E1C80F2BBC4F6D00209D70 /* ViewForFavoriteViewController.swift in Sources */,
 				2708D3452BB5874C000CC035 /* FavoritesViewController.swift in Sources */,
 				2708D3492BB5875B000CC035 /* ResponsesViewController.swift in Sources */,
 				2708D3512BB58786000CC035 /* ProfileViewController.swift in Sources */,
+				27E1C8152BBC542D00209D70 /* DataManagerProtocol.swift in Sources */,
 				2708D3712BB5CD82000CC035 /* CodeIntroductionElements.swift in Sources */,
 				2708D35D2BB5AFDC000CC035 /* LoginView.swift in Sources */,
 				2708D38E2BB936EC000CC035 /* ViewForSearchViewController.swift in Sources */,
@@ -388,6 +403,7 @@
 				2708D31F2BB57D61000CC035 /* SceneDelegate.swift in Sources */,
 				2708D36E2BB5CB30000CC035 /* CodeIntroductionElementsViewController.swift in Sources */,
 				2708D3792BB6E48B000CC035 /* SearchAndSortString.swift in Sources */,
+				27E1C8132BBC540300209D70 /* DataManager.swift in Sources */,
 				2708D36A2BB5C98D000CC035 /* AuthenticationProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

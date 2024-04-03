@@ -18,6 +18,9 @@ class VacancyCell: UICollectionViewCell {
     @IBOutlet weak var dateOfPublishLabel: UILabel!
     @IBOutlet weak var likeImage: UIImageView!
     @IBOutlet weak var requestButton: UIButton!
+    var id: UUID?
+    
+    var likeButtonClicked: ((UUID) -> Void)?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -25,6 +28,14 @@ class VacancyCell: UICollectionViewCell {
         mainView.translatesAutoresizingMaskIntoConstraints = false
         mainView.widthAnchor.constraint(equalToConstant: UIScreen.main.bounds.size.width - 40).isActive = true
         postLaber.sizeToFit()
+        let gestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(likeClicked))
+        likeImage.addGestureRecognizer(gestureRecognizer)
+        likeImage.isUserInteractionEnabled = true
+    }
+    
+    @objc private func likeClicked() {
+        guard let id = id else { return }
+        likeButtonClicked?(id)
     }
 
 }

@@ -42,10 +42,10 @@
                                     <fontDescription key="titleFontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="14"/>
                                 </buttonConfiguration>
                             </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="gc8-Ba-uzU">
+                            <stackView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="254" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="gc8-Ba-uzU">
                                 <rect key="frame" x="16" y="16" width="252" height="207"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Просматривают" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bjX-Rf-Y3T">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="254" text="Просматривают" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bjX-Rf-Y3T">
                                         <rect key="frame" x="0.0" y="0.0" width="252" height="17"/>
                                         <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="14"/>
                                         <color key="textColor" red="0.40784314269999999" green="0.69019609689999994" blue="0.35294118520000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>

@@ -15,8 +15,11 @@ class ViewForSearchViewController: UIView {
     @IBOutlet weak var mainView: UIView!
     @IBOutlet weak var moreButton: UIButton!
     var dataArray : JsonRequestData?
+    var favoritesData : [CoreDataIds]?
     var openVacancy : ((UUID) -> Void)?
     var updateSubviews : (() -> Void)?
+    var deleteLike : ((UUID, UICollectionViewCell) -> Void)?
+    var setLike: ((UUID, UICollectionViewCell) -> Void)?
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
@@ -42,6 +45,7 @@ class ViewForSearchViewController: UIView {
         default:
             moreButton.setTitle("Ещё \(count) вакансий", for: .normal)
         }
+        layoutSubviews()
     }
     
     override func layoutSubviews() {
@@ -75,6 +79,7 @@ extension ViewForSearchViewController: UICollectionViewDelegate, UICollectionVie
             return dataArray.offers.count
         } else {
             setupButton(count: dataArray.vacancies.count - 3)
+            layoutSubviews()
             return 3
         }
     }
@@ -101,13 +106,15 @@ extension ViewForSearchViewController: UICollectionViewDelegate, UICollectionVie
             return cell
         } else {
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "VacancyCell", for: indexPath) as? VacancyCell else { return VacancyCell() }
-            guard let dataArray = dataArray else { return VacancyCell() }
+            guard let dataArray = dataArray,
+                  let favoritesData = favoritesData else { return VacancyCell() }
             cell.layer.cornerRadius = 8
             cell.companyView.leftImage.isHidden = true
             cell.experienceView.rightImage.isHidden = true
             if let numberViews = dataArray.vacancies[indexPath.row].lookingNumber {
+                cell.numberViews.isHidden = false
                 switch numberViews {
-                case 2:
+                case 2...4:
                     cell.numberViews.text = "Сейчас просматривает \(numberViews) человека"
                 default:
                     cell.numberViews.text = "Сейчас просматривает \(numberViews) человек"
@@ -118,6 +125,7 @@ extension ViewForSearchViewController: UICollectionViewDelegate, UICollectionVie
             cell.postLaber.text = dataArray.vacancies[indexPath.row].title
             if let salary = dataArray.vacancies[indexPath.row].salary.short {
                 cell.salaryLabel.text = salary
+                cell.salaryLabel.isHidden = false
             } else {
                 cell.salaryLabel.isHidden = true
             }
@@ -136,10 +144,19 @@ extension ViewForSearchViewController: UICollectionViewDelegate, UICollectionVie
                 let dayMonthString = dayMonthFormatter.string(from: date)
                 cell.dateOfPublishLabel.text = "Опубликовано \(dayMonthString)"
             }
-            if dataArray.vacancies[indexPath.row].isFavorite {
+            cell.id = dataArray.vacancies[indexPath.row].id
+            if favoritesData.contains(where: { $0.id == dataArray.vacancies[indexPath.row].id }) {
                 cell.likeImage.image = UIImage(named: "Like.fill")
             } else {
                 cell.likeImage.image = UIImage(named: "Like")
+            }
+            cell.likeButtonClicked = { [weak self] id in
+                guard let self = self else { return }
+                if favoritesData.contains(where: { $0.id == id }) {
+                    deleteLike?(id, cell)
+                } else {
+                    setLike?(id, cell)
+                }
             }
             return cell
         }

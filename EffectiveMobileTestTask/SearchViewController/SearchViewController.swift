@@ -16,6 +16,7 @@ class SearchViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         mainView.dataArray = dataManager.getDataFromJson()
+        mainView.favoritesData = dataManager.getIdsFromCoreData()
         authenticationView.nextButtonClicked = { [weak self] in
             guard let self = self else { return }
             goToEmailConfirmation()
@@ -28,6 +29,22 @@ class SearchViewController: UIViewController {
         mainView.updateSubviews = { [weak self] in
             guard let self = self else { return }
             self.viewDidLayoutSubviews()
+        }
+        
+        mainView.deleteLike = { [weak self] id, cell in
+            guard let self = self else { return }
+            dataManager.deleteIdFromCoreData(id: id)
+            mainView.favoritesData = dataManager.getIdsFromCoreData()
+            mainView.vacancyCollectionView.reloadData()
+            viewDidLayoutSubviews()
+        }
+        
+        mainView.setLike = { [weak self] id, cell in
+            guard let self = self else { return }
+            dataManager.saveDataToCoreData(id: id)
+            mainView.favoritesData = dataManager.getIdsFromCoreData()
+            mainView.vacancyCollectionView.reloadData()
+            viewDidLayoutSubviews()
         }
 
     }
@@ -42,7 +59,11 @@ class SearchViewController: UIViewController {
         if UserDefaults().bool(forKey: "isUserLoggedIn") {
             authenticationView.isHidden = true
             mainView.isHidden = false
+            mainView.dataArray = dataManager.getDataFromJson()
+            mainView.favoritesData = dataManager.getIdsFromCoreData()
+            mainView.vacancyCollectionView.reloadData()
         } else {
+            dataManager.copyFavoriteDataToCoreData()
             mainView.isHidden = true
         }
     }
@@ -57,12 +78,32 @@ extension SearchViewController {
     private func openCell(id: UUID) {
         guard let navigationController = navigationController else { return }
         let data = dataManager.getDataFromJson(id: id)
-        
+        var idArray = dataManager.getIdsFromCoreData()
         let viewController = VacancyViewController()
+        if let idArray = idArray {
+            if idArray.contains(where:  { $0.id == id } ) {
+                viewController.isFavorite = true
+            } else {
+                viewController.isFavorite = false
+            }
+        }
         viewController.id = id
         viewController.data = data
         navigationController.pushViewController(viewController, animated: true)
         navigationController.setNavigationBarHidden(false, animated: true)
+        viewController.setLikeButton = { [weak self] id in
+            guard let self = self else { return }
+            if let idArray = idArray {
+                if idArray.contains(where:  { $0.id == id } ) {
+                    dataManager.deleteIdFromCoreData(id: id)
+                    viewController.isFavorite = false
+                } else {
+                    dataManager.saveDataToCoreData(id: id)
+                    viewController.isFavorite = true
+                }
+            }
+            idArray = dataManager.getIdsFromCoreData()
+        }
     }
 }
 

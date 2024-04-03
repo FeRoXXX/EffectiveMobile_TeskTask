@@ -55,6 +55,7 @@
 		27E1C8112BBC4F7200209D70 /* ViewForFavoriteViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27E1C8102BBC4F7200209D70 /* ViewForFavoriteViewController.xib */; };
 		27E1C8132BBC540300209D70 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E1C8122BBC540300209D70 /* DataManager.swift */; };
 		27E1C8152BBC542D00209D70 /* DataManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E1C8142BBC542D00209D70 /* DataManagerProtocol.swift */; };
+		27E1C82A2BBD549900209D70 /* CoreDataIds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E1C8292BBD549900209D70 /* CoreDataIds.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -126,6 +127,7 @@
 		27E1C8262BBD1CE500209D70 /* SF-Pro-Display-LightItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SF-Pro-Display-LightItalic.otf"; path = "../../../Downloads/San Francisco Pro Display/SF-Pro-Display-LightItalic.otf"; sourceTree = "<group>"; };
 		27E1C8272BBD1CE500209D70 /* SF-Pro-Display-Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SF-Pro-Display-Semibold.otf"; path = "../../../Downloads/San Francisco Pro Display/SF-Pro-Display-Semibold.otf"; sourceTree = "<group>"; };
 		27E1C8282BBD1CE500209D70 /* SF-Pro-Display-Ultralight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SF-Pro-Display-Ultralight.otf"; path = "../../../Downloads/San Francisco Pro Display/SF-Pro-Display-Ultralight.otf"; sourceTree = "<group>"; };
+		27E1C8292BBD549900209D70 /* CoreDataIds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataIds.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -295,6 +297,7 @@
 				2708D39F2BB9CD9F000CC035 /* JsonRequestData.swift */,
 				27E1C8122BBC540300209D70 /* DataManager.swift */,
 				27E1C8142BBC542D00209D70 /* DataManagerProtocol.swift */,
+				27E1C8292BBD549900209D70 /* CoreDataIds.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -442,6 +445,7 @@
 				2708D38E2BB936EC000CC035 /* ViewForSearchViewController.swift in Sources */,
 				2708D31D2BB57D61000CC035 /* AppDelegate.swift in Sources */,
 				2708D3372BB580D1000CC035 /* TabBarController.swift in Sources */,
+				27E1C82A2BBD549900209D70 /* CoreDataIds.swift in Sources */,
 				27E1C7FD2BBBCFC800209D70 /* VacancyViewController.swift in Sources */,
 				2708D3352BB58074000CC035 /* NavigationViewController.swift in Sources */,
 				2708D31F2BB57D61000CC035 /* SceneDelegate.swift in Sources */,

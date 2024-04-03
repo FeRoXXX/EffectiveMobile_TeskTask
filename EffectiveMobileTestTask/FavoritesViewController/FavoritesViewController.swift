@@ -20,7 +20,10 @@ class FavoritesViewController: UIViewController {
             guard let self = self else { return }
             goToEmailConfirmation()
         }
-        vacanciesView.data = dataManager.getFavoriteData()
+        vacanciesView.favoritesData = dataManager.getIdsFromCoreData()
+        if let favorite = dataManager.getIdsFromCoreData() {
+            vacanciesView.dataArray = dataManager.getFavoriteDataFromIds(ids: favorite)
+        }
         
         vacanciesView.updateSubviews = { [weak self] in
             guard let self = self else { return }
@@ -30,6 +33,28 @@ class FavoritesViewController: UIViewController {
         vacanciesView.openVacancyDetail = { [weak self] id in
             guard let self = self else { return }
             openCell(id: id)
+        }
+        
+        vacanciesView.deleteLike = { [weak self] id, cell in
+            guard let self = self else { return }
+            dataManager.deleteIdFromCoreData(id: id)
+            vacanciesView.favoritesData = dataManager.getIdsFromCoreData()
+            if let favorite = dataManager.getIdsFromCoreData() {
+                vacanciesView.dataArray = dataManager.getFavoriteDataFromIds(ids: favorite)
+            }
+            vacanciesView.collectionView.reloadData()
+            viewDidLayoutSubviews()
+        }
+        
+        vacanciesView.setLike = { [weak self] id, cell in
+            guard let self = self else { return }
+            dataManager.saveDataToCoreData(id: id)
+            vacanciesView.favoritesData = dataManager.getIdsFromCoreData()
+            if let favorite = dataManager.getIdsFromCoreData() {
+                vacanciesView.dataArray = dataManager.getFavoriteDataFromIds(ids: favorite)
+            }
+            vacanciesView.collectionView.reloadData()
+            viewDidLayoutSubviews()
         }
     }
     
@@ -43,6 +68,12 @@ class FavoritesViewController: UIViewController {
         if UserDefaults().bool(forKey: "isUserLoggedIn") {
             authenticationView.isHidden = true
             vacanciesView.isHidden = false
+            vacanciesView.favoritesData = dataManager.getIdsFromCoreData()
+            if let favorite = dataManager.getIdsFromCoreData() {
+                vacanciesView.dataArray = dataManager.getFavoriteDataFromIds(ids: favorite)
+            }
+            vacanciesView.collectionView.reloadData()
+            viewDidLayoutSubviews()
         } else {
             vacanciesView.isHidden = true
         }
@@ -58,12 +89,33 @@ extension FavoritesViewController {
     private func openCell(id: UUID) {
         guard let navigationController = navigationController else { return }
         let data = dataManager.getDataFromJson(id: id)
-        
+        var idArray = dataManager.getIdsFromCoreData()
         let viewController = VacancyViewController()
+        if let idArray = idArray {
+            if idArray.contains(where:  { $0.id == id } ) {
+                viewController.isFavorite = true
+            } else {
+                viewController.isFavorite = false
+            }
+        }
         viewController.id = id
         viewController.data = data
         navigationController.pushViewController(viewController, animated: true)
         navigationController.setNavigationBarHidden(false, animated: true)
+        
+        viewController.setLikeButton = { [weak self] id in
+            guard let self = self else { return }
+            if let idArray = idArray {
+                if idArray.contains(where:  { $0.id == id } ) {
+                    dataManager.deleteIdFromCoreData(id: id)
+                    viewController.isFavorite = false
+                } else {
+                    dataManager.saveDataToCoreData(id: id)
+                    viewController.isFavorite = true
+                }
+            }
+            idArray = dataManager.getIdsFromCoreData()
+        }
     }
 }
 

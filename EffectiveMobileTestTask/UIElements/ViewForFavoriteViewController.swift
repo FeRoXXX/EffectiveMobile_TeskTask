@@ -12,9 +12,12 @@ class ViewForFavoriteViewController: UIView {
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var collectionViewHeightConstrain: NSLayoutConstraint!
     
-    var data : [Vacancy]?
+    var dataArray : [Vacancy]?
+    var favoritesData : [CoreDataIds]?
     var updateSubviews : (() -> Void)?
     var openVacancyDetail : ((UUID) -> Void)?
+    var deleteLike : ((UUID, UICollectionViewCell) -> Void)?
+    var setLike: ((UUID, UICollectionViewCell) -> Void)?
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
@@ -30,19 +33,19 @@ class ViewForFavoriteViewController: UIView {
     }
     
     private func setupLabel() {
-        guard let data = data else {
+        guard let favoritesData = favoritesData else {
             numberOfVacancy.text = "Список пуст"
             return
         }
-        switch data.count {
+        switch favoritesData.count {
         case 0:
             numberOfVacancy.text = "Список пуст"
         case 1:
-            numberOfVacancy.text = "\(data.count) вакансия"
+            numberOfVacancy.text = "\(favoritesData.count) вакансия"
         case 2...4:
-            numberOfVacancy.text = "\(data.count) вакансии"
+            numberOfVacancy.text = "\(favoritesData.count) вакансии"
         default:
-            numberOfVacancy.text = "\(data.count) вакансий"
+            numberOfVacancy.text = "\(favoritesData.count) вакансий"
         }
     }
     
@@ -69,19 +72,22 @@ extension ViewForFavoriteViewController: UICollectionViewDelegate, UICollectionV
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        guard let data = data else { return 0 }
-        return data.count
+        guard let favoritesData = favoritesData else { return 0 }
+        setupLabel()
+        return favoritesData.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "VacancyCell", for: indexPath) as? VacancyCell,
-              let data = data else { return VacancyCell() }
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "VacancyCell", for: indexPath) as? VacancyCell else { return VacancyCell() }
+        guard let dataArray = dataArray,
+              let favoritesData = favoritesData else { return VacancyCell() }
         cell.layer.cornerRadius = 8
         cell.companyView.leftImage.isHidden = true
         cell.experienceView.rightImage.isHidden = true
-        if let numberViews = data[indexPath.row].lookingNumber {
+        if let numberViews = dataArray[indexPath.row].lookingNumber {
+            cell.numberViews.isHidden = false
             switch numberViews {
-            case 2:
+            case 2...4:
                 cell.numberViews.text = "Сейчас просматривает \(numberViews) человека"
             default:
                 cell.numberViews.text = "Сейчас просматривает \(numberViews) человек"
@@ -89,19 +95,20 @@ extension ViewForFavoriteViewController: UICollectionViewDelegate, UICollectionV
         } else {
             cell.numberViews.isHidden = true
         }
-        cell.postLaber.text = data[indexPath.row].title
-        if let salary = data[indexPath.row].salary.short {
+        cell.postLaber.text = dataArray[indexPath.row].title
+        if let salary = dataArray[indexPath.row].salary.short {
             cell.salaryLabel.text = salary
+            cell.salaryLabel.isHidden = false
         } else {
             cell.salaryLabel.isHidden = true
         }
-        cell.cityLabel.text = data[indexPath.row].address.town
-        cell.companyView.textLabel.text = data[indexPath.row].company
-        cell.experienceView.textLabel.text = data[indexPath.row].experience.previewText
+        cell.cityLabel.text = dataArray[indexPath.row].address.town
+        cell.companyView.textLabel.text = dataArray[indexPath.row].company
+        cell.experienceView.textLabel.text = dataArray[indexPath.row].experience.previewText
         let dateFormater = DateFormatter()
         dateFormater.locale = Locale(identifier: "ru_RU")
         dateFormater.dateFormat = "yyyy-MM-dd"
-        let date = dateFormater.date(from: data[indexPath.row].publishedDate)
+        let date = dateFormater.date(from: dataArray[indexPath.row].publishedDate)
         if let date = date {
             let dayMonthFormatter = DateFormatter()
             dayMonthFormatter.locale = Locale(identifier: "ru_RU")
@@ -110,16 +117,25 @@ extension ViewForFavoriteViewController: UICollectionViewDelegate, UICollectionV
             let dayMonthString = dayMonthFormatter.string(from: date)
             cell.dateOfPublishLabel.text = "Опубликовано \(dayMonthString)"
         }
-        if data[indexPath.row].isFavorite {
+        cell.id = dataArray[indexPath.row].id
+        if favoritesData.contains(where: { $0.id == dataArray[indexPath.row].id }) {
             cell.likeImage.image = UIImage(named: "Like.fill")
         } else {
             cell.likeImage.image = UIImage(named: "Like")
+        }
+        cell.likeButtonClicked = { [weak self] id in
+            guard let self = self else { return }
+            if favoritesData.contains(where: { $0.id == id }) {
+                deleteLike?(id, cell)
+            } else {
+                setLike?(id, cell)
+            }
         }
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        guard let data = data else { return }
-        openVacancyDetail?(data[indexPath.row].id)
+        guard let dataArray = dataArray else { return }
+        openVacancyDetail?(dataArray[indexPath.row].id)
     }
 }

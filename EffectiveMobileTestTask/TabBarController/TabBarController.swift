@@ -30,7 +30,9 @@ class TabBarController: UITabBarController {
         let favoritesController: UINavigationController = UINavigationController(rootViewController: favoriteViewController)
         favoritesController.setNavigationBarHidden(true, animated: true)
         favoritesController.title = "Избранное"
-        favoritesController.tabBarItem.image = UIImage(named: "Like")
+        let image = UIImage(named: "Like")
+        let customTabBarItem = UITabBarItem(title: "Избранное", image: image, selectedImage: nil)
+        favoritesController.tabBarItem = customTabBarItem
         let responsesController = ResponsesViewController()
         responsesController.title = "Отклики"
         responsesController.tabBarItem.image = UIImage(named: "Response")

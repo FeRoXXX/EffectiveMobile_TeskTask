@@ -26,6 +26,8 @@ class VacancyViewController: UIViewController {
     
     var id : UUID!
     var data: Vacancy?
+    var isFavorite: Bool?
+    var setLikeButton: ((UUID) -> Void)?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -110,8 +112,8 @@ extension VacancyViewController {
         let shareButton = UIBarButtonItem(image: UIImage(named: "Share"), style: .done, target: self, action: .none)
         let eyeButton = UIBarButtonItem(image: UIImage(named: "Eye"), style: .done, target: self, action: .none)
         var likeButton = UIBarButtonItem()
-        if let data = data {
-            if data.isFavorite {
+        if let isFavorite = isFavorite {
+            if isFavorite {
                 likeButton = UIBarButtonItem(image: UIImage(named: "Like.fill"), style: .done, target: self, action: #selector(setLike))
             } else {
                 likeButton = UIBarButtonItem(image: UIImage(named: "Like"), style: .done, target: self, action: #selector(setLike))
@@ -135,6 +137,7 @@ extension VacancyViewController {
     }
     
     @objc private func setLike() {
-        
+        setLikeButton?(id)
+        setupNavigationBar()
     }
 }

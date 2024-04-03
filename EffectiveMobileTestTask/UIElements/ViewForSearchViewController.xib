@@ -29,9 +29,9 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WHq-Gz-iC4">
-                    <rect key="frame" x="0.0" y="0.0" width="393" height="725"/>
+                    <rect key="frame" x="0.0" y="0.0" width="393" height="724"/>
                     <subviews>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bit-nP-qZm">
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bit-nP-qZm" userLabel="mainView">
                             <rect key="frame" x="0.0" y="0.0" width="393" height="450.33333333333331"/>
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" horizontalCompressionResistancePriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ge2-r8-qDN">
@@ -79,6 +79,9 @@
                                 </collectionView>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Вакансии для вас" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2ZH-bz-mxH">
                                     <rect key="frame" x="16" y="208" width="164" height="24"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="24" id="trz-JL-ADj"/>
+                                    </constraints>
                                     <fontDescription key="fontDescription" name="SFProDisplay-Semibold" family="SF Pro Display" pointSize="20"/>
                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     <nil key="highlightedColor"/>
@@ -144,7 +147,7 @@
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="WHq-Gz-iC4" secondAttribute="trailing" id="1na-d2-AeK"/>
                 <constraint firstItem="WHq-Gz-iC4" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="71u-s4-en0"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="WHq-Gz-iC4" secondAttribute="bottom" constant="93" id="bOm-mi-aHJ"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="WHq-Gz-iC4" secondAttribute="bottom" constant="94" id="bOm-mi-aHJ"/>
                 <constraint firstItem="WHq-Gz-iC4" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="c0S-PR-xI5"/>
             </constraints>
             <nil key="simulatedTopBarMetrics"/>

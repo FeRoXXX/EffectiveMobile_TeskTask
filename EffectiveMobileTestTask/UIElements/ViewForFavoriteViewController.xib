@@ -24,20 +24,20 @@
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB">
-            <rect key="frame" x="0.0" y="0.0" width="393" height="1120"/>
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CzJ-GI-MSZ">
-                    <rect key="frame" x="0.0" y="59" width="393" height="1027"/>
+                    <rect key="frame" x="0.0" y="59" width="393" height="665"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ARj-cU-GXS">
-                            <rect key="frame" x="0.0" y="0.0" width="393" height="1071"/>
+                            <rect key="frame" x="0.0" y="0.0" width="393" height="210"/>
                             <subviews>
                                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="uuz-KB-oEO">
-                                    <rect key="frame" x="16" y="110" width="361" height="961"/>
+                                    <rect key="frame" x="16" y="110" width="361" height="100"/>
                                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
-                                        <constraint firstAttribute="height" constant="961" id="c2y-jF-NLg"/>
+                                        <constraint firstAttribute="height" constant="100" id="c2y-jF-NLg"/>
                                     </constraints>
                                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="nDI-ze-ysg">
                                         <size key="itemSize" width="128" height="128"/>
@@ -86,12 +86,11 @@
                 <constraint firstItem="ARj-cU-GXS" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" id="Ekv-Kj-z4m"/>
                 <constraint firstItem="CzJ-GI-MSZ" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Hmb-2d-cHh"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="CzJ-GI-MSZ" secondAttribute="trailing" id="Rav-sE-VQo"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="CzJ-GI-MSZ" secondAttribute="bottom" id="u1Z-Mj-z67"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="CzJ-GI-MSZ" secondAttribute="bottom" constant="94" id="u1Z-Mj-z67"/>
                 <constraint firstItem="CzJ-GI-MSZ" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="uB4-ao-EUK"/>
             </constraints>
             <nil key="simulatedTopBarMetrics"/>
             <nil key="simulatedBottomBarMetrics"/>
-            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="-11.450381679389313" y="83.098591549295776"/>
         </view>
     </objects>

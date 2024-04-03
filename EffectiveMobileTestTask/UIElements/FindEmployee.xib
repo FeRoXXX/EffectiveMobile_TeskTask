@@ -4,9 +4,16 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="SF-Pro-Display-Medium.otf">
+            <string>SFProDisplay-Medium</string>
+        </array>
+        <array key="SF-Pro-Display-Regular.otf">
+            <string>SFProDisplay-Regular</string>
+        </array>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FindEmployee" customModule="EffectiveMobileTestTask" customModuleProvider="target"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -15,29 +22,36 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Поиск сотрудников" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kG6-al-oOl">
-                    <rect key="frame" x="16" y="24" width="156" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <nil key="textColor"/>
+                    <rect key="frame" x="16" y="24" width="143" height="20"/>
+                    <fontDescription key="fontDescription" name="SFProDisplay-Medium" family="SF Pro Display" pointSize="16"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Размещение вакансий и доступ к базе резюме" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4U7-5k-YYs">
-                    <rect key="frame" x="16" y="61" width="329" height="40.666666666666657"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <nil key="textColor"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Размещение вакансий и доступ к базе резюме" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4U7-5k-YYs">
+                    <rect key="frame" x="16" y="60" width="329" height="17"/>
+                    <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="14"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ly2-dA-JgP">
-                    <rect key="frame" x="65" y="99" width="178" height="35"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ly2-dA-JgP">
+                    <rect key="frame" x="16" y="93" width="329" height="31"/>
                     <state key="normal" title="Button"/>
-                    <buttonConfiguration key="configuration" style="filled" title="Я ищу сотрудников"/>
+                    <buttonConfiguration key="configuration" style="filled" title="Я ищу сотрудников">
+                        <backgroundConfiguration key="background" cornerRadius="50">
+                            <color key="backgroundColor" red="0.40784314269999999" green="0.69019609689999994" blue="0.35294118520000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        </backgroundConfiguration>
+                        <fontDescription key="titleFontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="14"/>
+                    </buttonConfiguration>
                 </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
-            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <color key="backgroundColor" red="0.13333332540000001" green="0.13725490870000001" blue="0.14509806040000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
             <constraints>
+                <constraint firstItem="ly2-dA-JgP" firstAttribute="top" secondItem="4U7-5k-YYs" secondAttribute="bottom" constant="16" id="2dC-gg-gOj"/>
+                <constraint firstItem="ly2-dA-JgP" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="3O3-px-VEx"/>
                 <constraint firstItem="kG6-al-oOl" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="24" id="AfP-pr-O41"/>
                 <constraint firstAttribute="trailing" secondItem="4U7-5k-YYs" secondAttribute="trailing" constant="16" id="HFm-EA-G4f"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="ly2-dA-JgP" secondAttribute="trailing" constant="16" id="dYS-7m-vZX"/>
                 <constraint firstItem="4U7-5k-YYs" firstAttribute="top" secondItem="kG6-al-oOl" secondAttribute="bottom" constant="16" id="ktp-9r-boe"/>
                 <constraint firstItem="kG6-al-oOl" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="pVi-gn-FBX"/>
                 <constraint firstItem="4U7-5k-YYs" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="qBx-3S-uOp"/>
@@ -53,9 +67,4 @@
             <point key="canvasLocation" x="131.29770992366412" y="-11.619718309859156"/>
         </view>
     </objects>
-    <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-    </resources>
 </document>

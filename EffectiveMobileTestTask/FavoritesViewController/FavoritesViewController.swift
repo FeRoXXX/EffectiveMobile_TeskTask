@@ -42,6 +42,9 @@ class FavoritesViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         if UserDefaults().bool(forKey: "isUserLoggedIn") {
             authenticationView.isHidden = true
+            vacanciesView.isHidden = false
+        } else {
+            vacanciesView.isHidden = true
         }
     }
     

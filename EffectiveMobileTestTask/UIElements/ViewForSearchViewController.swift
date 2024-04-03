@@ -16,6 +16,7 @@ class ViewForSearchViewController: UIView {
     @IBOutlet weak var moreButton: UIButton!
     var dataArray : JsonRequestData?
     var openVacancy : ((UUID) -> Void)?
+    var updateSubviews : (() -> Void)?
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
@@ -48,6 +49,7 @@ class ViewForSearchViewController: UIView {
         if let flowLayout = vacancyCollectionView.collectionViewLayout as? UICollectionViewFlowLayout {
             flowLayout.estimatedItemSize = UICollectionViewFlowLayout.automaticSize
         }
+        updateSubviews?()
     }
     
     func loadNibFromXib() -> UIView {

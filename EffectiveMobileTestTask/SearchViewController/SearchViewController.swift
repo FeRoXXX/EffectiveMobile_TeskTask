@@ -15,6 +15,7 @@ class SearchViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        mainView.dataArray = dataManager.getDataFromJson()
         authenticationView.nextButtonClicked = { [weak self] in
             guard let self = self else { return }
             goToEmailConfirmation()
@@ -22,6 +23,11 @@ class SearchViewController: UIViewController {
         mainView.openVacancy = { [weak self] id in
             guard let self = self else { return }
             openCell(id: id)
+        }
+        
+        mainView.updateSubviews = { [weak self] in
+            guard let self = self else { return }
+            self.viewDidLayoutSubviews()
         }
 
     }
@@ -35,7 +41,9 @@ class SearchViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         if UserDefaults().bool(forKey: "isUserLoggedIn") {
             authenticationView.isHidden = true
-            mainView.dataArray = dataManager.getDataFromJson()
+            mainView.isHidden = false
+        } else {
+            mainView.isHidden = true
         }
     }
     

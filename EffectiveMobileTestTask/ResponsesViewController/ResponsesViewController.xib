@@ -20,11 +20,11 @@
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="57I-uU-Da9" customClass="AuthenticationView" customModule="EffectiveMobileTestTask" customModuleProvider="target">
                     <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
-                    <color key="backgroundColor" red="0.039215691390000001" green="0.039215695109999997" blue="0.039215687659999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <color key="backgroundColor" red="0.047058824450000002" green="0.047058824450000002" blue="0.047058824450000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="57I-uU-Da9" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="9gv-kE-bdS"/>
                 <constraint firstAttribute="bottom" secondItem="57I-uU-Da9" secondAttribute="bottom" id="Ur0-4X-hiw"/>

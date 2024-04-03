@@ -6,6 +6,11 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="SF-Pro-Display-Regular.otf">
+            <string>SFProDisplay-Regular</string>
+        </array>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LabelAndImageForCell" customModule="EffectiveMobileTestTask" customModuleProvider="target">
             <connections>
@@ -20,7 +25,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="KQA-VO-mxW">
-                    <rect key="frame" x="0.0" y="0.0" width="107.33333333333333" height="25"/>
+                    <rect key="frame" x="0.0" y="0.0" width="98.333333333333329" height="25"/>
                     <subviews>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Experience" translatesAutoresizingMaskIntoConstraints="NO" id="D2e-9j-Mb7">
                             <rect key="frame" x="0.0" y="0.0" width="25" height="25"/>
@@ -30,16 +35,16 @@
                             <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="small"/>
                         </imageView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z3C-vU-DIx">
-                            <rect key="frame" x="33" y="0.0" width="41.333333333333343" height="25"/>
+                            <rect key="frame" x="33" y="0.0" width="32.333333333333343" height="25"/>
                             <constraints>
                                 <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="20" id="6rz-XX-k0q"/>
                             </constraints>
-                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="14"/>
                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Check.mark" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cc2-36-XHu">
-                            <rect key="frame" x="82.333333333333329" y="0.0" width="25" height="25"/>
+                            <rect key="frame" x="73.333333333333329" y="0.0" width="25" height="25"/>
                             <constraints>
                                 <constraint firstAttribute="width" secondItem="cc2-36-XHu" secondAttribute="height" multiplier="1:1" id="HNS-pA-Mfl"/>
                             </constraints>

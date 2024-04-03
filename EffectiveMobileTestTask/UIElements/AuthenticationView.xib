@@ -6,6 +6,11 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="SF-Pro-Display-Semibold.otf">
+            <string>SFProDisplay-Semibold</string>
+        </array>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AuthenticationView" customModule="EffectiveMobileTestTask" customModuleProvider="target">
             <connections>
@@ -19,28 +24,28 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cty-2e-8mu" customClass="LoginView" customModule="EffectiveMobileTestTask" customModuleProvider="target">
-                    <rect key="frame" x="16" y="213.33333333333337" width="361" height="187"/>
+                    <rect key="frame" x="16" y="217" width="361" height="187"/>
                     <color key="backgroundColor" red="0.18566039847392682" green="0.4459236724021271" blue="0.86078912019729614" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="187" id="t2v-rI-avG"/>
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CJE-wk-Ypg" customClass="FindEmployee" customModule="EffectiveMobileTestTask" customModuleProvider="target">
-                    <rect key="frame" x="16" y="433.33333333333331" width="361" height="147.99999999999994"/>
+                    <rect key="frame" x="16" y="437" width="361" height="148"/>
                     <color key="backgroundColor" red="0.18566039847392682" green="0.4459236724021271" blue="0.86078912019729614" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="148" id="J2g-bS-xQT"/>
                     </constraints>
                 </view>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Вход в личный кабинет" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bqp-Is-zXI">
-                    <rect key="frame" x="16" y="64" width="185" height="20.333333333333329"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Вход в личный кабинет" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Bqp-Is-zXI">
+                    <rect key="frame" x="16" y="64" width="215.33333333333334" height="24"/>
+                    <fontDescription key="fontDescription" name="SFProDisplay-Semibold" family="SF Pro Display" pointSize="20"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
-            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="CJE-wk-Ypg" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="7YV-th-JKZ"/>
                 <constraint firstItem="cty-2e-8mu" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="7t9-Jd-soT"/>
@@ -48,7 +53,7 @@
                 <constraint firstItem="Bqp-Is-zXI" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="Hvv-5C-aVH"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="cty-2e-8mu" secondAttribute="trailing" constant="16" id="OIc-Yl-Mg6"/>
                 <constraint firstItem="cty-2e-8mu" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="fLJ-BK-9HP"/>
-                <constraint firstItem="Bqp-Is-zXI" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="64" id="i0n-Q7-JKa"/>
+                <constraint firstItem="Bqp-Is-zXI" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="5" id="i0n-Q7-JKa"/>
                 <constraint firstItem="CJE-wk-Ypg" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="pwU-ea-oi6"/>
                 <constraint firstItem="cty-2e-8mu" firstAttribute="top" secondItem="Bqp-Is-zXI" secondAttribute="bottom" constant="129" id="smx-X2-ndR"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="CJE-wk-Ypg" secondAttribute="trailing" constant="16" id="vtm-Vq-Sof"/>
